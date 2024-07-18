@@ -4,7 +4,7 @@ const context = canvas.getContext("2d");
 
 const frameCount = 144;
 const currentFrame = index => (
-    `/sequence1000x1000/3d_plita3_${index.toString().padStart(4, '0')}.jpg`
+    `./sequence1000x1000/3d_plita3_${index.toString().padStart(4, '0')}.jpg`
 )
 
 const preloadImages = () => {
