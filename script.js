@@ -1,49 +1,42 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const canvas = document.getElementById('spriteCanvas');
-  const ctx = canvas.getContext('2d');
-  const spriteImage = new Image();
-  spriteImage.src = './600х600х7x144.avif';
+const html = document.documentElement;
+const canvas = document.getElementById("hero-lightpass");
+const context = canvas.getContext("2d");
 
-  const totalFrames = 144;
-  const columns = 7;
-  const frameWidth = 600;
-  const frameHeight = 600;
-  
-  canvas.width = frameWidth
-  canvas.height = frameHeight
+const frameCount = 144;
+const currentFrame = index => (
+    `/sequence1000x1000/3d_plita3_${index.toString().padStart(4, '0')}.jpg`
+)
 
-  spriteImage.onload = () => {
-    window.addEventListener('scroll', () => {
-      const scrollTop = window.scrollY;
-      const maxScrollTop = document.body.scrollHeight - window.innerHeight;
-      const scrollFraction = scrollTop / maxScrollTop;
-      const frameIndex = Math.min(
-        totalFrames - 1,
-        Math.floor(scrollFraction * totalFrames)
-      );
-
-      drawFrame(frameIndex);
-    });
-
-    // Початковий малюнок
-    drawFrame(0);
-  };
-
-  function drawFrame(frameIndex) {
-    const column = frameIndex % columns;
-    const row = Math.floor(frameIndex / columns);
-
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(
-      spriteImage,
-      column * frameWidth,
-      row * frameHeight,
-      frameWidth,
-      frameHeight,
-      0,
-      0,
-      canvas.width,
-      canvas.height
-    );
+const preloadImages = () => {
+  for (let i = 1; i < frameCount; i++) {
+    const img = new Image();
+    img.src = currentFrame(i);
   }
+};
+
+const img = new Image()
+img.src = currentFrame(1);
+canvas.width=1000;
+canvas.height=1000;
+img.onload=function(){
+  context.drawImage(img, 0, 0);
+}
+
+const updateImage = index => {
+  img.src = currentFrame(index);
+  context.drawImage(img, 0, 0);
+}
+
+window.addEventListener('scroll', () => {
+  const scrollTop = html.scrollTop;
+  const maxScrollTop = html.scrollHeight - window.innerHeight;
+  const scrollFraction = scrollTop / maxScrollTop;
+  const frameIndex = Math.min(
+      frameCount - 1,
+      Math.ceil(scrollFraction * frameCount)
+  );
+
+  requestAnimationFrame(() => updateImage(frameIndex + 1))
 });
+
+preloadImages()
