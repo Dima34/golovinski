@@ -451,6 +451,110 @@ header nav {
   width: 440px;
 }
 
+.get-closer {
+  padding: 140px 0;
+}
+.get-closer .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 160px;
+}
+.get-closer .wrapper h2 {
+  color: #FFF;
+  font-family: Manrope;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: -3.2px;
+  text-transform: uppercase;
+  width: 1054px;
+}
+.get-closer .get-closer_content {
+  width: 100%;
+  display: flex;
+  gap: 64px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.get-closer .get-closer_content p {
+  width: 380px;
+}
+.get-closer .get-closer_video-container {
+  height: 560px;
+  width: 440px;
+  overflow: hidden;
+}
+.get-closer .get-closer_video-container .get-closer_video-wrapper {
+  height: 560px;
+  width: 440px;
+  position: relative;
+}
+.get-closer .get-closer_video-container .get-closer_video-preview {
+  width: 100%;
+  height: auto;
+}
+.get-closer .get-closer_video-container .get-closer_video-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.get-closer .get-closer_video-container .get-closer_video-play:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.partners {
+  padding-bottom: 140px;
+}
+.partners h2 {
+  color: #FFF;
+  font-family: Manrope;
+  font-size: 185px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: -9.25px;
+  text-transform: uppercase;
+}
+.partners h2 span {
+  color: #FFF;
+  font-family: Gallient;
+  font-size: 165px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: -3.3px;
+  text-transform: uppercase;
+}
+.partners .partners_runline {
+  margin-top: -93px;
+}
+.partners .partners_runline-item {
+  display: flex;
+  gap: 20px;
+}
+.partners .partners_card {
+  width: 550px;
+  height: 550px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  border: 0px solid #141414;
+  background: rgba(14, 14, 14, 0.5);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.partners .partners_card img {
+  width: 350px;
+  height: 350px;
+}
+
 .button {
   color: #FFF;
   font-family: Manrope;
@@ -463,8 +567,9 @@ header nav {
   position: relative;
   display: block;
   height: fit-content;
+  width: fit-content;
 }
-.button:after {
+.button:not(.no-underline):after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -472,6 +577,101 @@ header nav {
   width: 100%;
   height: 1.5px;
   background: #404040;
+}
+
+footer {
+  border-top: 1px solid #202020;
+  padding-top: 80px;
+}
+footer .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+}
+footer .footer-top {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer_left {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 80px;
+  width: fit-content;
+}
+footer .footer_left_link-grid {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  gap: 66px 132px;
+}
+footer .footer_link-block {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: fit-content;
+}
+footer .footer_link-block.big .button {
+  color: #FFF;
+  font-family: Manrope;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: -2.16px;
+  text-transform: uppercase;
+}
+footer .footer_right {
+  display: flex;
+  gap: 100px;
+}
+footer .footer_socials {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+footer .footer_socials ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+footer .footer-socials-button {
+  padding: 15px 20px;
+  text-align: center;
+  padding: 15px 20px;
+  border-radius: 30px;
+  border: 1px solid #808080;
+  width: fit-content;
+}
+footer .footer_privacy {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .footer-bottom {
+  display: flex;
+  justify-content: center;
+}
+footer .footer-bottom p {
+  color: #FFF;
+  text-align: center;
+  font-family: Manrope;
+  font-size: 310px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 310px */
+  letter-spacing: -18.6px;
+  text-transform: uppercase;
+}
+
+.text-20 {
+  color: #FFF;
+  font-family: Manrope;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 20px */
+  letter-spacing: -0.8px;
+  text-transform: uppercase;
 }
 
 [fillable-text] > div {
