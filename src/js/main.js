@@ -133,7 +133,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
   const advCards = document.querySelectorAll('.advantages-card')
 
-
+  const whoWeIntro = document.querySelectorAll('.who-we_intro')
+  gsap.to(whoWeIntro, {
+    scrollTrigger: {
+      trigger: whoWeIntro,
+      start: "top top",
+      end: "500px top",
+      markers: true,
+      scrub: 1
+    },
+    width: "1207px",
+    marginRight: "50px"
+  })
+  
+  
   // window.addEventListener('onLoaderLoaded', (event) => {
   //   setTimeout(()=>{
   //     headerLogoTl.play()

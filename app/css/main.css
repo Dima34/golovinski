@@ -133,12 +133,14 @@ header nav {
   gap: 4px;
   height: 61px;
   overflow: hidden;
+  width: fit-content;
 }
 .button-arrow .button-content {
   border-radius: 2px;
   border: 1px solid #FFF;
   padding: 0px 43px;
   height: 100%;
+  transition: 0.3s;
 }
 .button-arrow .button-content span {
   display: none;
@@ -153,6 +155,7 @@ header nav {
   letter-spacing: -0.72px;
   text-transform: uppercase;
   margin-top: 17px;
+  transition: 0.3s;
 }
 .button-arrow .button-side {
   border-radius: 2px;
@@ -255,6 +258,11 @@ header nav {
 }
 
 .advantages-card_text {
+  padding-left: 40px;
+  margin-left: auto;
+}
+
+.text-16 {
   color: #808080;
   font-family: Manrope;
   font-size: 16px;
@@ -262,8 +270,6 @@ header nav {
   font-weight: 500;
   line-height: 125%;
   letter-spacing: -0.48px;
-  padding-left: 40px;
-  margin-left: auto;
 }
 
 .presentation {
@@ -334,13 +340,6 @@ header nav {
 }
 .cta .cta_left p {
   max-width: 155px;
-  color: #404040;
-  font-family: Manrope;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 125%;
-  letter-spacing: -0.64px;
 }
 .cta .cta_right {
   display: flex;
@@ -383,9 +382,96 @@ header nav {
 }
 .cta .cta-description a {
   color: white;
+  transition: 0.3s;
 }
 .cta .cta-description a:hover {
   color: #404040;
+}
+
+.who-we {
+  padding: 140px 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 80px;
+}
+.who-we h2 {
+  color: #FFF;
+  font-family: Manrope;
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 90%; /* 115.2px */
+  letter-spacing: -6.4px;
+  text-transform: uppercase;
+}
+.who-we .wrapper {
+  display: grid;
+  grid-template-columns: 502px 1fr;
+  gap: 414px;
+}
+.who-we .who-we_intro {
+  width: 100%;
+  height: auto;
+  float: right;
+}
+.who-we .who-we_left {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 32px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.who-we .who-we_right {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 50px;
+}
+.who-we .who-we_right-title {
+  color: #FFF;
+  font-family: Manrope;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 105%;
+  letter-spacing: -1.6px;
+  text-transform: uppercase;
+}
+.who-we .who-we_right-content {
+  display: flex;
+  width: 100%;
+  gap: 32px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.who-we .who-we_right-content p {
+  width: 440px;
+}
+
+.button {
+  color: #FFF;
+  font-family: Manrope;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+  letter-spacing: -0.8px;
+  padding-bottom: 4px;
+  position: relative;
+  display: block;
+  height: fit-content;
+}
+.button:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: #404040;
 }
 
 [fillable-text] > div {
