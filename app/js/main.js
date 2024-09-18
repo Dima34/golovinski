@@ -817,7 +817,7 @@ window.addEventListener('DOMContentLoaded', event => {
     ease: 'power1.out',
     translateY: 51,
     rotationX: -70,
-    transformOrigin: '0% 70% -50px',
+    transformOrigin: '0% 70% -2.604vw',
     opacity: 0,
     stagger: 0.05,
     delay: .5
@@ -858,7 +858,7 @@ window.addEventListener('DOMContentLoaded', event => {
   headerNavTl.from(headerNav, {
     duration: .6,
     stagger: .1,
-    translateY: '22px',
+    translateY: '1.146vw',
     ease: 'power3.out',
     delay: .3
   });
@@ -872,8 +872,8 @@ window.addEventListener('DOMContentLoaded', event => {
     height: 0
   }, 0);
   gsap.set(heroBottomTitleChars, {
-    translateY: '20px',
-    translateX: '3px',
+    translateY: '1.042vw',
+    translateX: '0.156vw',
     opacity: 0
   });
   heroBottomTitleTl.to(heroBottomTitleChars, {
@@ -894,13 +894,13 @@ window.addEventListener('DOMContentLoaded', event => {
   const heroBottomSubtitleLines = document.querySelectorAll('.hero-bottom_subtitle span');
   heroBottomTitleTl.from(heroBottomSubtitleLines, {
     opacity: 0,
-    translateY: '10px',
+    translateY: '0.521vw',
     stagger: .5,
     duration: .55,
     delay: .4
   }, '-=1');
   heroBottomTitleTl.to(heroBottomButton, {
-    height: '61px',
+    height: '3.177vw',
     duration: 1.5,
     delay: .2,
     ease: 'circ.inOut'
@@ -911,11 +911,11 @@ window.addEventListener('DOMContentLoaded', event => {
     scrollTrigger: {
       trigger: whoWeIntro,
       start: "top top",
-      end: "500px top",
+      end: "50% top",
       scrub: 1
     },
-    width: "1207px",
-    marginRight: "50px"
+    width: "62.865vw",
+    marginRight: "2.604vw"
   });
   window.addEventListener('onLoaderLoaded', event => {
     setTimeout(() => {

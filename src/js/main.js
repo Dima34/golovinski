@@ -74,7 +74,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   let heroTitleTimeline = gsap.timeline({ paused: true })
   heroTitleTimeline.from(heroTitleWords, {
     duration: 1, ease: 'power1.out', translateY: 51,
-    rotationX: -70, transformOrigin: '0% 70% -50px', opacity: 0, stagger: 0.05,
+    rotationX: -70, transformOrigin: '0% 70% -2.604vw', opacity: 0, stagger: 0.05,
     delay: .5,
   })
   
@@ -108,7 +108,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   const headerNav = document.querySelectorAll('.header_nav-link')
   let headerNavTl = gsap.timeline({ paused: true })
   headerNavTl.from(headerNav, {
-    duration: .6, stagger: .1, translateY: '22px', ease: 'power3.out', delay: .3,
+    duration: .6, stagger: .1, translateY: '1.146vw', ease: 'power3.out', delay: .3,
   })
 
   const heroBottomTitle = document.querySelector('.hero-bottom_title')
@@ -122,7 +122,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }, 0,
   )
 
-  gsap.set(heroBottomTitleChars, { translateY: '20px', translateX: '3px', opacity: 0 })
+  gsap.set(heroBottomTitleChars, { translateY: '1.042vw', translateX: '0.156vw', opacity: 0 })
 
   heroBottomTitleTl.to(heroBottomTitleChars, {
     translateY: '0px', translateX: '0px',
@@ -143,7 +143,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
   heroBottomTitleTl.from(heroBottomSubtitleLines,
     {
-      opacity: 0, translateY: '10px',
+      opacity: 0, translateY: '0.521vw',
       stagger: .5,
       duration: .55,
       delay: .4,
@@ -153,7 +153,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
   heroBottomTitleTl.to(heroBottomButton,
     {
-      height: '61px',
+      height: '3.177vw',
       duration: 1.5,
       delay: .2,
       ease: 'circ.inOut',
@@ -168,11 +168,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
     scrollTrigger: {
       trigger: whoWeIntro,
       start: "top top",
-      end: "500px top",
+      end: "50% top",
       scrub: 1
     },
-    width: "1207px",
-    marginRight: "50px"
+    width: "62.865vw",
+    marginRight: "2.604vw"
   })
   
   
