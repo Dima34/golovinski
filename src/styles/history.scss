@@ -7,7 +7,7 @@
   padding: 8vw 0;
   margin-bottom: 6.25vw;
   &-container {
-    max-width: calc(var(--container) + 1.5rem);
+    max-width: calc(var(--container) + 1.5vw);
     margin: 0 auto;
     padding: 0 12px;
   }
@@ -216,7 +216,7 @@
       }
     }
     &-info {
-      padding: 0 12px;
+      padding: 0 3.25vw;
     }
     &-heading {
       font-size: 6vw;
