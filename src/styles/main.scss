@@ -844,17 +844,19 @@ footer{
 #video-popup-close {
   cursor: pointer;
   position: absolute;
-  right: -10px;
-  top: -10px;
+  right: -0.521vw;
+  top: -0.521vw;
   z-index: 998;
-  width: 25px;
-  height: 25px;
-  border-radius: 25px;
-  text-align: center;
-  font-size: 12px;
+  width: 2.604vw;
+  height: 2.604vw;
+  border-radius: 1.302vw;
+  font-size: 1.146vw;
   background-color: #000;
-  line-height: 25px;
+  line-height: 1.302vw;
   color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #video-popup-iframe-container {
@@ -862,8 +864,8 @@ footer{
   z-index: 997;
   width: 100%;
   padding-bottom: 56.25%;
-  border: 2px solid #000;
-  border-radius: 2px;
+  border: 0.104vw solid #000;
+  border-radius: 0.104vw;
   background-color: #000;
 }
 
@@ -889,5 +891,5 @@ footer{
 }
 
 #video-popup-close:hover {
-  color: #DE0023;
+  border-color: white;
 }
