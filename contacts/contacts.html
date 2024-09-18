@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    integrity="sha256-WAgYcAck1C1/zEl5sBl5cfyhxtLgKGdpI3oKyJffVRI="
+    crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="contacts">
+        <div class="contacts__input">
+            <h4 class="contacts__input_title">Let’s get in touch</h4>
+            <form class="contacts__input-form">
+                <label for="fullname">[FULL NAME]</label>
+                <input type="text" id="fullname" name="fullname" value="JONATHAN MILLER">
+
+                <label for="phonenumber">[PHONE]</label>
+                <input type="text" id="phonenumber" name="phonenumber" value="+380689292712">
+
+                <label for="e-mail">[E-MAIL]</label>
+                <input type="email" id="e-mail" name="e-mail" value="jonathan@gmail.com">
+
+                <label for="message">[MESSAGE]</label>
+                <div class="message-container">
+                    <input type="text" id="message" name="message" placeholder="I need ...">
+                    <span class="optional-label">OPTIONAL</span>
+                </div>
+                <div class="contacts__input-block">
+                    <button class="contacts__input-btn" type="submit">
+                        submit  message 
+                        <img class="contacts__input-btn-arrow" src="button.png" alt="Arrow">
+                    </button>
+    
+                    <div class="checkbox">
+                        <input type="checkbox" id="agree" checked>
+                        <label for="agree">I agree to Privacy Policy</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="contacts__information">
+            <div class="contacts__information-text">
+                <div class="contacts__information_block">
+                    <span class="contacts__information_block-name">address:</span>
+                    <span class="contacts__information_block-description">Administrativna str. 8, Golovino, Ukraine</span>
+                </div>
+                <div class="contacts__information_block">
+                    <span class="contacts__information_block-name">phone:</span>
+                    <span class="contacts__information_block-description">+380 (68) 444-50-69</span>
+                </div>
+                <div class="contacts__information_block">
+                    <span class="contacts__information_block-name">E-mail:</span>
+                    <span class="contacts__information_block-description">office@golovinski.com</span>
+                </div>
+            </div>
+                <div class="contacts__information_block icon">
+                    <span class="contacts__information_block-name">social network:</span>
+                    <div class="contacts__information_block-media">
+                        <a href="#" class="contacts__information_block-media-icon">
+                            <img class="contacts__information_block-media-icon-img" src="Instagram.png" alt="Icon Of Instagram">
+                        </a>
+                        <a href="#" class="contacts__information_block-media-icon">
+                            <img class="contacts__information_block-media-icon-img" src="facebook.png" alt="Icon Of Facebook">
+                        </a>
+                        <a href="#" class="contacts__information_block-media-icon">
+                            <img class="contacts__information_block-media-icon-img" src="link.png" alt="Icon Of LinkedIn">
+                        </a>
+                    </div>
+                </div>
+            </div>
+    </section>
+</body>
+</html>
