@@ -4,8 +4,13 @@
   font-weight: 400;
 }
 
+@import '../styles/history.scss';
+
 body {
+  font-size: 16px;
   background: #000000;
+  color: #fff;
+  font-family: Manrope !important;
 }
 
 //body:not(.loaded){
