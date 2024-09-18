@@ -8,9 +8,9 @@ body {
   background: #000000;
 }
 
-//body:not(.loaded){
-//  overflow: hidden;
-//}
+body:not(.loaded){
+  overflow: hidden;
+}
 
 .wrapper {
   width: 1920px;
@@ -55,6 +55,26 @@ header {
   line-height: normal;
   letter-spacing: -0.64px;
   text-transform: uppercase;
+  position: relative;
+
+  &:hover::before {
+    transform-origin: 100% 50%;
+    transform: scale3d(1, 1, 1);
+  }
+
+  &::before {
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    transform-origin: 0% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+    background: white;
+  }
 }
 
 .hero {
@@ -639,15 +659,25 @@ header {
   display: block;
   height: fit-content;
   width: fit-content;
-  
-  &:not(.no-underline):after{
-    content: '';
+  text-transform: uppercase;
+
+  &:hover::before {
+    transform-origin: 100% 50%;
+    transform: scale3d(1, 1, 1);
+  }
+
+  &:not(.no-underline)::before {
+    content:"";
     position: absolute;
-    bottom: 0;
-    left: 0;
     width: 100%;
     height: 1.5px;
-    background: #404040;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    transform-origin: 0% 50%;
+    transform: scale3d(0, 1, 1);
+    transition: transform 0.3s;
+    background: white;
   }
 }
 
@@ -777,4 +807,15 @@ footer{
     -webkit-background-clip: text;
     /*   margin-bottom: -250px; */
   }
+}
+
+#plate {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100vw;
+  max-height: 100vh;
+  width: 732px;
+  height: 567px;
 }
