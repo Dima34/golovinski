@@ -1,139 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
-@include("../partials/head.html")
+@include("../partials/head.html", {
+    pageName: "Golovinski",
+    additionalLinks : []
+})
 <body>
-<!--@include("../partials/loader.html")-->
+@include("../partials/loader.html")
 @include("../partials/header.html")
 
-<main class="loaded">
-  <section class="hero">
-    <div class="wrapper">
-      <h1 class="hero_title" text-split>
-        <span class="gallient">Golovinski.</span>The majesty of <br> nature shaped by time
-      </h1>
-      <div class="hero-bottom">
-        <div class="hero-bottom_content">
-          <h2 class="hero-bottom_title" text-split>Premium Volga Blue labradorite slabs</h2>
-          <p class="hero-bottom_subtitle" line-split>
-            Born from the depths of our quarries, destined to become the radiance of your interior’s soul
-          </p>
-        </div>
-        <a href="#" class="button-arrow">
-          <div class="button-content">
-            <span></span>
-            <p>GET IN TOUCH</p>
-          </div>
-          <div class="button-side"></div>
-        </a>
-      </div>
-    </div>
-  </section>
+<main id="smooth-wrapper">
+    <div id="smooth-content">
+        <canvas id="plate"></canvas>
 
-  <section class="advantages">
-    <div class="wrapper">
-      <div class="advantages-card">
-        <h2 class="advantages-card_title">
-          Own<br>quarries
-        </h2>
-        <p class="advantages-card_text">
-          By managing our own quarries, we ensure complete control over the extraction and processing of Volga Blue
-          labradorite. This guarantees the high quality of each slab without compromise.
-        </p>
-      </div>
-      <div class="advantages-card">
-        <h2 class="advantages-card_title">
-          10,000 m² of<br> stone<br> extracted monthly
-        </h2>
-        <p class="advantages-card_text">
-          This level of extraction allows us to meet the high demand for our products worldwide while maintaining the
-          consistent quality and elegance of each exquisite Volga Blue labradorite slab. Thanks to such production
-          scales,
-          we guarantee stable supplies and unparalleled durability of our products.
-        </p>
-      </div>
-      <div class="advantages-card">
-        <h2 class="advantages-card_title">
-          Creation of <br>
-          3x2 meter slabs
-        </h2>
-        <p class="advantages-card_text">
-          We specialize in creating 3x2 meter slabs that embody the grandeur and beauty of Volga Blue labradorite. Each
-          slab undergoes meticulous processing to ensure perfect smoothness, impeccable quality, and unique visual
-          effects
-          that give your interiors an elite appearance.
-        </p>
-      </div>
-      <div class="advantages-card">
-        <h2 class="advantages-card_title">
-          Manufacturing <br> slabs in<br> thicknesses of<br>
-          20, 30, 50, and 80 mm
-        </h2>
-        <p class="advantages-card_text">
-          At Golovinski, we produce slabs in thicknesses of 20, 30, 50, and 80 mm, providing flexibility and variety for
-          your design needs. Each slab is carefully processed to ensure high quality, elegance, and durability that
-          meets
-          our highest standards.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="presentation">
-    <div class="wrapper">
-      <div class="presentation-header">
-        <h2 class="presentation-text" fillable-text>
-          In the dance of light that touches the surface of the slabs, an echo of refined blue hues unfolds, reflecting
-          the majesty of nature, creating an aura of mystery and giving them a unique and modern appearance.
-        </h2>
-        <div class="presentation-decoration">
-          <img class="circle" src="../img/presentation-decoration-circle.svg" alt="">
-          <img class="arrow" src="../img/presentation-decoration-arrow.svg" alt="">
-        </div>
-      </div>
-    </div>
-    <video src="./img/presentation-2k.mp4" autoplay muted playsinline class="presentation_video"></video>
-    <!--    <video controls autoplay muted playsinline class="presentation_video">-->
-    <!--      <source src="../img/presentation-2k.mp4" type="video/mp4" media="(max-width: 1920px) and (max-device-pixel-ratio: 1)">-->
-    <!--      <source src="../img/presentation-2k.mp4" type="video/mp4" media="(max-width: 1920px) and (min-device-pixel-ratio: 1.5)">-->
-    <!--      <source src="../img/presentation-2k.mp4" type="video/mp4" media="(min-width: 1921px)">-->
-    <!--      Your browser does not support the video tag.-->
-    <!--    </video>-->
-
-  </section>
-
-  <section class="cta">
-    <div class="wrapper">
-      <div class="cta_left">
-        <p>[ Your project deserves the magic of Volga Blue ]</p>
-        <p>/ CTA</p>
-      </div>
-      <div class="cta_right">
-        <h2 class="cta-header">
-          let’s create <br>
-          something <span>creative</span>
-        </h2>
-
-        <div class="cta-content">
-          <p class="cta-description">
-            Make the grandeur of nature a part of your unique interior with Golovinski. Submit your request now and
-            <a href="#">receive a professional free consultation.</a>
-          </p>
-          <a href="#" class="button-arrow">
-            <div class="button-content">
-              <span></span>
-              <p>Leave a request</p>
+        <section class="hero">
+            <div class="wrapper">
+                <h1 class="hero_title" text-split>
+                    <span class="gallient">Golovinski.</span><br class="d-mob">The majesty of <br> nature shaped <br class="d-mob"> by time
+                </h1> 
+                <div class="hero-bottom">
+                    <div class="hero-bottom_content">
+                        <h2 class="hero-bottom_title" text-split>Premium Volga Blue labradorite slabs</h2>
+                        <p class="hero-bottom_subtitle" line-split>
+                            Born from the depths of our quarries, destined to become the radiance of your interior’s
+                            soul
+                        </p>
+                    </div>
+                    <a href="./contacts.html" class="button-arrow">
+                        <div class="button-content">
+                            <span></span>
+                            <p>GET IN TOUCH</p>
+                        </div>
+                        <div class="button-side"></div>
+                    </a>
+                </div>
             </div>
-            <div class="button-side"></div>
-          </a>
-        </div>
-      </div>
+        </section>
+
+        <section class="advantages">
+            <div class="wrapper">
+                <div class="advantages-card">
+                    <h2 class="advantages-card_title">
+                        Own<br>quarries
+                    </h2>
+                    <p class="advantages-card_text text-16">
+                        By managing our own quarries, we ensure complete control over the extraction and processing of
+                        Volga
+                        Blue
+                        labradorite. This guarantees the high quality of each slab without compromise.
+                    </p>
+                </div>
+                <div class="advantages-card">
+                    <h2 class="advantages-card_title">
+                        10,000 m² of<br> stone<br> extracted monthly
+                    </h2>
+                    <p class="advantages-card_text text-16">
+                        This level of extraction allows us to meet the high demand for our products worldwide while
+                        maintaining the
+                        consistent quality and elegance of each exquisite Volga Blue labradorite slab. Thanks to such
+                        production
+                        scales,
+                        we guarantee stable supplies and unparalleled durability of our products.
+                    </p>
+                </div>
+                <div class="advantages-card">
+                    <h2 class="advantages-card_title">
+                        Creation of <br>
+                        3x2 meter slabs
+                    </h2>
+                    <p class="advantages-card_text text-16">
+                        We specialize in creating 3x2 meter slabs that embody the grandeur and beauty of Volga Blue
+                        labradorite. Each
+                        slab undergoes meticulous processing to ensure perfect smoothness, impeccable quality, and
+                        unique
+                        visual
+                        effects
+                        that give your interiors an elite appearance.
+                    </p>
+                </div>
+                <div class="advantages-card">
+                    <h2 class="advantages-card_title">
+                        Manufacturing <br> slabs in<br> thicknesses of<br>
+                        20, 30, 50, and 80 mm
+                    </h2>
+                    <p class="advantages-card_text text-16">
+                        At Golovinski, we produce slabs in thicknesses of 20, 30, 50, and 80 mm, providing flexibility
+                        and
+                        variety for
+                        your design needs. Each slab is carefully processed to ensure high quality, elegance, and
+                        durability
+                        that
+                        meets
+                        our highest standards.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="presentation">
+            <div class="wrapper">
+                <div class="presentation-header">
+                    <h2 class="presentation-text" fillable-text>
+                        In the dance of light that touches the surface of the slabs, an echo of refined blue hues
+                        unfolds,
+                        reflecting
+                        the majesty of nature, creating an aura of mystery and giving them a unique and modern
+                        appearance.
+                    </h2>
+                    <div class="presentation-decoration">
+                        <img class="circle" src="../img/presentation-decoration-circle.svg" alt="">
+                        <img class="arrow" src="../img/presentation-decoration-arrow.svg" alt="">
+                    </div>
+                </div>
+            </div>
+            <video src="./img/presentation-2k.mp4" autoplay muted playsinline class="presentation_video"></video>
+            <!--    <video controls autoplay muted playsinline class="presentation_video">-->
+            <!--      <source src="../img/presentation-2k.mp4" type="video/mp4" media="(max-width: 1920px) and (max-device-pixel-ratio: 1)">-->
+            <!--      <source src="../img/presentation-2k.mp4" type="video/mp4" media="(max-width: 1920px) and (min-device-pixel-ratio: 1.5)">-->
+            <!--      <source src="../img/presentation-2k.mp4" type="video/mp4" media="(min-width: 1921px)">-->
+            <!--      Your browser does not support the video tag.-->
+            <!--    </video>-->
+
+        </section>
+
+        <section class="cta">
+            <div class="wrapper">
+                <div class="cta_left">
+                    <p class="text-16">[ Your project <br class="d-mob"> deserves the magic of<br class="d-mob">  Volga Blue ]</p>
+                    <p class="text-16">/ CTA</p>
+                </div>
+                <div class="cta_right">
+                    <h2 class="cta-header">
+                        let’s create <br>
+                        something <span>creative</span>
+                    </h2>
+
+                    <div class="cta-content">
+                        <p class="cta-description">
+                            Make the grandeur of nature a part of your unique interior with Golovinski. Submit your
+                            request
+                            now and
+                            <a href="./contacts.html">receive a professional free consultation.</a>
+                        </p>
+                        <a href="./contacts.html" class="button-arrow">
+                            <div class="button-content">
+                                <span></span>
+                                <p>Leave a request</p>
+                            </div>
+                            <div class="button-side"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="who-we">
+            <img src="../img/who-we_intro.jpg" alt="" class="who-we_intro">
+            <div class="wrapper">
+                <div class="who-we_left">
+                    <h2>who are we?</h2>
+                    <p class="text-16">/ About Us</p>
+                </div>
+                <div class="who-we_right">
+                    <h3 class="who-we_right-title">
+                        We Golovinski are the creators of your unparalleled experience, where the magic of elite natural
+                        materials intertwines with international-class service.
+                    </h3>
+                    <div class="who-we_right-content">
+                        <p class="text-16">
+                            Founded in 1894, our company is the oldest stone processing enterprise in Ukraine,
+                            distinguished by the exceptional "Volga Blue" labradorite, which has become a symbol of our
+                            craftsmanship. We take pride in having consolidated over ten granite quarries, enabling us
+                            to serve clients worldwide.
+                            <br><br>
+                            Our company not only preserves a rich heritage, reflecting the values and principles of
+                            masterful service but also implements innovative and eco-friendly methods, allowing us to
+                            lead the industry and ensure the highest level of quality and reliability in our products.
+                        </p>
+                        <a href="./history.html" class="button">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="get-closer">
+            <div class="wrapper">
+                <h2>Get closer to the magic and uncover the secret of creating Volga Blue labradorite slabs with
+                    Golovinski.</h2>
+                <div class="get-closer_content">
+                    <p class="text-16">Dive into the history, technology, and unique properties of Volga Blue
+                        labradorite through our video
+                        and discover why Golovinski is the unrivaled leader in the world of stone processing.</p>
+                    <div class="get-closer_video-container vpop" data-type="youtube" data-id="ylYbD7uEDBg" data-autoplay='true'>
+                        <div class="get-closer_video-wrapper">
+                            <img src="../img/who-we-are_video-placeholder.jpg" alt="" class="get-closer_video-preview">
+                            <img src="../img/who-we-are_video-play.png" alt="" class="get-closer_video-play">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="partners">
+            <div class="wrapper">
+                <h2>our <span>partners</span></h2>
+                <div class="partners_runline">
+                    <div class="partners_runline-item">
+                        <div class="partners_card">
+                            <img src="../img/partner-1.svg" alt="dazzini-maccine">
+                        </div>
+
+                        <div class="partners_card">
+                            <img src="../img/partner-2.svg" alt="pedrini">
+                        </div>
+
+                        <div class="partners_card">
+                            <img src="../img/partner-3.svg" alt="fravizelon">
+                        </div>
+
+                        <div class="partners_card">
+                            <img src="../img/partner-4.svg" alt="tecnoidea">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        @include("../partials/footer.html")
     </div>
-  </section>
+
 </main>
+
+<!-- copy this stuff and down -->
+<div id="video-popup-overlay"></div>
+
+<div id="video-popup-container">
+    <div id="video-popup-close" class="fade">&#10006;</div>
+    <div id="video-popup-iframe-container">
+        <iframe id="video-popup-iframe" src="" width="100%" height="100%" frameborder="0"></iframe>
+    </div>
+</div>
+
 </body>
 
 <script src="https://unpkg.com/split-type"></script>
 <script src="../js/GSDevTools.js"></script>
+<script src="../js/ScrollSmoother.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
         integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -141,4 +253,28 @@
         integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="../js/main.js"></script>
+
+<script>
+    $(".vpop").on('click', function(e) {
+        e.preventDefault();
+        $("#video-popup-overlay,#video-popup-iframe-container,#video-popup-container,#video-popup-close").show();
+        console.log("clicked")
+        var srchref='',autoplay='',id=$(this).data('id');
+        if($(this).data('type') == 'vimeo') var srchref="//player.vimeo.com/video/";
+        else if($(this).data('type') == 'youtube') var srchref="https://www.youtube.com/embed/";
+
+        if($(this).data('autoplay') == true) autoplay = '?autoplay=1';
+
+        $("#video-popup-iframe").attr('src', srchref+id+autoplay);
+
+        $("#video-popup-iframe").on('load', function() {
+            $("#video-popup-container").show();
+        });
+    });
+
+    $("#video-popup-close, #video-popup-overlay").on('click', function(e) {
+        $("#video-popup-iframe-container,#video-popup-container,#video-popup-close,#video-popup-overlay").hide();
+        $("#video-popup-iframe").attr('src', '');
+    });
+</script>
 </html>

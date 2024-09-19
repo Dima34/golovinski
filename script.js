@@ -1,10 +1,10 @@
 const html = document.documentElement;
-const canvas = document.getElementById("hero-lightpass");
+const canvas = document.getElementById("plate");
 const context = canvas.getContext("2d");
-
+console.log("hello world!");
 const frameCount = 144;
 const currentFrame = index => (
-    `./sequence1000x1000/3d_plita3_${index.toString().padStart(4, '0')}.jpg`
+    `./img/plateSequence/0${index.toString()}.jpg`
 )
 
 const preloadImages = () => {

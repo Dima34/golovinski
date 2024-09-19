@@ -1,6 +1,38 @@
+@media screen and (max-width: 900px) {
+  .contacts__input-form label{
+    color: #FFF;
+    font-family: Manrope;
+    font-size: 3.467vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.139vw;
+    text-transform: uppercase;
+    margin-bottom: 4vw;
+  }
+}
+
 .contacts {
+  font-family: Manrope !important;
   display: flex;
   flex-direction: column;
+  
+  input{
+    font-family: Manrope;
+    font-weight: 500;
+  }
+  
+  
+
+  .message-container{
+    input{
+      width: 100%;
+    }
+
+    .optional-label{
+      display: none;
+    }
+  }
 
   &__input {
     width: 93.6vw;
@@ -115,6 +147,19 @@
   }
 }
 
+input[type="text"], input[type="email"] {
+  font-size: 4.8vw;
+  margin-bottom: 5.333vw;
+  padding-bottom: 1.6vw;
+  letter-spacing: -0.02vw;
+  color: white;
+  border-bottom: 1px solid #404040;
+
+  &::placeholder{
+    color: #404040;
+  }
+}
+
 @media screen and (min-width: 900px) {
   .contacts {
     flex-direction: row;
@@ -185,6 +230,7 @@
 
       &-block {
         display: flex;
+        width: 100%;
       }
 
       &-btn {
@@ -192,10 +238,11 @@
         width: 13.02vw;
         margin-top: 2.6vw;
         height: 3.49vw;
-        margin-left: 30vw;
+        margin-left: auto;
         font-size: 0.9375vw;
         line-height: 1.28vw;
         letter-spacing: -0.02vw;
+        cursor: pointer;
 
         &-arrow {
           margin-left: 0.52vw;
@@ -217,8 +264,29 @@
     margin-bottom: 2.19vw;
     padding-bottom: 0.52vw;
     letter-spacing: -0.02vw;
+    color: white;
+    border-bottom: 1px solid #404040;
+    
+    &::placeholder{
+      color: #404040;
+    }
   }
+  
+  .message-container{
+    position: relative;
+    
+    .optional-label{
+      position: absolute;
+      right: 0;
+      bottom: 0.521vw;
+      border-radius: 28px;
+      border: 1px solid #404040;
+      color: #404040;
+    }
+  }
+  
   .message-container input {
+    width: 100%;
     height: 7.91vw;
     padding-bottom: 6.46vw;
   }
@@ -241,24 +309,35 @@
     height: 1.15vw;
 
     input[type="checkbox"] {
-      width: 0.9375vw;
-      height: 0.9375vw;
-      margin-right: 0.52vw;
-      border-radius: 0.05vw;
-
-      &:checked::before {
-        width: 0.52vw;
-        height: 0.52vw;
-        border-radius: 0.05vw;
-        top: 0.1vw;
-        left: 0.13vw;
-      }
+      display: none;
     }
 
     label {
       font-size: 0.99vw;
       line-height: 1.42vw;
       letter-spacing: -0.02vw;
+
+      &:before{
+        position: absolute;
+      }
+      
+      &:after {
+        width: 0.9375vw;
+        height: 0.9375vw;
+        margin-right: 0.52vw;
+        border-radius: 0.05vw;
+      }
+    }
+
+    label + input[type="checkbox"]:checked {
+
+      &::before {
+        width: 0.52vw;
+        height: 0.52vw;
+        border-radius: 0.05vw;
+        top: 0.1vw;
+        left: 0.13vw;
+      }
     }
   }
 }
