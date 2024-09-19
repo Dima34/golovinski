@@ -764,6 +764,9 @@ function handlePresentationVideo() {
     presentationVideo.play();
   });
 }
+function isMobile() {
+  return window.innerWidth <= 900;
+}
 function handleFillableText() {
   let fillableText = document.querySelectorAll('[fillable-text]');
   fillableText.forEach(el => {
@@ -901,23 +904,25 @@ window.addEventListener('DOMContentLoaded', event => {
     delay: .4
   }, '-=1');
   heroBottomTitleTl.to(heroBottomButton, {
-    height: '3.177vw',
+    height: isMobile() ? "16.267vw" : '3.177vw',
     duration: 1.5,
     delay: .2,
     ease: 'circ.inOut'
   }, 'heroBottomTitle-=1.3');
   const advCards = document.querySelectorAll('.advantages-card');
   const whoWeIntro = document.querySelectorAll('.who-we_intro');
-  gsap.to(whoWeIntro, {
-    scrollTrigger: {
-      trigger: whoWeIntro,
-      start: "top top",
-      end: "50% top",
-      scrub: 1
-    },
-    width: "62.865vw",
-    marginRight: "2.604vw"
-  });
+  if (!isMobile()) {
+    gsap.to(whoWeIntro, {
+      scrollTrigger: {
+        trigger: whoWeIntro,
+        start: "top top",
+        end: "50% top",
+        scrub: 1
+      },
+      width: "62.865vw",
+      marginRight: "2.604vw"
+    });
+  }
   window.addEventListener('onLoaderLoaded', event => {
     setTimeout(() => {
       headerLogoTl.play();
@@ -1049,7 +1054,7 @@ function handlePlateRotation() {
   let segmetsData;
   if (scrollFromTopPX === 0) {
     startOscillation();
-  } else {
+  } else if (!isMobile()) {
     segmetsData = stopOscillationAndGetSegments();
     console.log(segmetsData);
     handleSegmentRotation(scrollFromTopPX, segmetsData);
