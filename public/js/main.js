@@ -758,6 +758,7 @@ __webpack_require__.r(__webpack_exports__);
 function handlePresentationVideo() {
   const presentationVideo = document.querySelector('.presentation_video');
   presentationVideo.controls = false;
+  presentationVideo.playbackRate = 0.66;
   presentationVideo.addEventListener('ended', function () {
     presentationVideo.currentTime = 0;
     presentationVideo.play();
