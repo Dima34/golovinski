@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-@include("../partials/head.html")
+@include("../partials/head.html", {
+    pageName: "Golovinski",
+    additionalLinks : []
+})
 <body>
 @include("../partials/loader.html")
-@include("../partials/header.html", {pageName: "Golovinski"})
+@include("../partials/header.html")
 
 <main id="smooth-wrapper">
     <div id="smooth-content">
