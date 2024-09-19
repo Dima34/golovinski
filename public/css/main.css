@@ -1375,15 +1375,15 @@ footer .footer-bottom p {
   .wrapper {
     width: 100vw;
     margin: 0 auto;
-    padding: 0 12px;
+    padding: 0 3.2vw;
   }
   header {
-    top: 35px;
+    top: 9.333vw;
     padding: 0 0;
   }
   header .header_logo {
-    width: 37px;
-    height: 42px;
+    width: 9.867vw;
+    height: 11.2vw;
   }
   header nav {
     position: absolute;
@@ -1397,29 +1397,29 @@ footer .footer-bottom p {
   .header_nav-link {
     color: #FFF;
     font-family: Manrope;
-    font-size: 18px;
+    font-size: 4.8vw;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    letter-spacing: -0.72px;
+    letter-spacing: -0.192vw;
     text-transform: uppercase;
   }
   .header_nav-link::before {
     display: none;
   }
   .hero {
-    padding-top: 127px;
-    padding-bottom: 50px;
-    height: 782px;
+    padding-top: 33.867vw;
+    padding-bottom: 13.333vw;
+    height: 208.533vw;
   }
   .hero_title {
     color: #FFF;
     font-family: Manrope;
-    font-size: 46px;
+    font-size: 12.267vw;
     font-style: normal;
     font-weight: 500;
     line-height: 100%;
-    letter-spacing: -2.76px;
+    letter-spacing: -0.736vw;
     text-transform: uppercase;
     transform-style: preserve-3d;
   }
@@ -1427,11 +1427,11 @@ footer .footer-bottom p {
     color: #FFF;
     text-align: center;
     font-family: Gallient;
-    font-size: 42px;
+    font-size: 11.2vw;
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
-    letter-spacing: -0.84px;
+    letter-spacing: -0.224vw;
     text-transform: uppercase;
     transform-style: preserve-3d;
   }
@@ -1441,45 +1441,45 @@ footer .footer-bottom p {
   }
   .hero-bottom {
     flex-direction: column;
-    gap: 20px;
+    gap: 5.333vw;
   }
   .hero-bottom .button-arrow {
     margin-top: 0;
     height: 0;
   }
   .hero-bottom_content {
-    gap: 8px;
+    gap: 2.133vw;
   }
   .hero-bottom_title {
     color: #FFF;
     font-family: Manrope;
-    font-size: 24px;
+    font-size: 6.4vw;
     font-style: normal;
     font-weight: 500;
-    line-height: 110%; /* 26.4px */
-    letter-spacing: -0.96px;
+    line-height: 110%; /* 7.04vw */
+    letter-spacing: -0.256vw;
     text-transform: uppercase;
   }
   .hero-bottom_subtitle {
     color: #707070;
     font-family: Manrope;
-    font-size: 16px;
+    font-size: 4.267vw;
     font-style: normal;
     font-weight: 500;
-    line-height: 120%; /* 19.2px */
-    letter-spacing: -0.48px;
+    line-height: 120%; /* 5.12vw */
+    letter-spacing: -0.128vw;
     width: 100%;
   }
   .button-arrow {
     display: flex;
-    gap: 4px;
-    height: 61px;
+    gap: 1.067vw;
+    height: 16.267vw;
     overflow: hidden;
     width: 100%;
   }
   .button-arrow .button-content {
-    border-radius: 2px;
-    border: 1px solid #FFF;
+    border-radius: 0.533vw;
+    border: 0.267vw solid #FFF;
     padding: 0vw 2.24vw;
     height: 100%;
     width: 100%;
@@ -1492,20 +1492,20 @@ footer .footer-bottom p {
   .button-arrow .button-content p {
     color: #FFF;
     font-family: Manrope;
-    font-size: 18px;
+    font-size: 4.8vw;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    letter-spacing: -0.72px;
+    letter-spacing: -0.192vw;
     text-transform: uppercase;
-    margin-top: 18px;
+    margin-top: 4.8vw;
   }
   .button-arrow .button-side {
-    border-radius: 2px;
-    border: 1px solid #FFF;
+    border-radius: 0.533vw;
+    border: 0.267vw solid #FFF;
     background: #FFF;
     position: relative;
-    width: 61px;
+    width: 16.267vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1514,84 +1514,84 @@ footer .footer-bottom p {
   }
   .button-arrow .button-side:after {
     content: "";
-    width: 19px;
-    height: 19px;
-    top: 20px;
-    left: 21px;
+    width: 5.067vw;
+    height: 5.067vw;
+    top: 5.333vw;
+    left: 5.6vw;
   }
   .advantages {
-    padding: 50px 0;
+    padding: 13.333vw 0;
   }
   .advantages .wrapper {
     width: 100%;
-    gap: 25px;
+    gap: 6.667vw;
   }
   .advantages-card {
     width: 100%;
-    min-height: 350px;
+    min-height: 93.333vw;
     background: #0E0E0E;
-    padding: 15px;
-    gap: 24px;
+    padding: 4vw;
+    gap: 6.4vw;
   }
   .advantages-card:after {
     content: "";
     position: absolute;
-    left: 15px;
-    bottom: 15px;
-    width: 20px;
-    height: 20px;
+    left: 4vw;
+    bottom: 4vw;
+    width: 5.333vw;
+    height: 5.333vw;
   }
   .advantages-card:nth-child(1) .advantages-card_text {
-    max-width: 200px;
+    max-width: 53.333vw;
   }
   .advantages-card:nth-child(2) .advantages-card_text {
-    max-width: 243px;
+    max-width: 64.8vw;
   }
   .advantages-card:nth-child(3) .advantages-card_text {
-    max-width: 238px;
+    max-width: 63.467vw;
   }
   .advantages-card:nth-child(4) .advantages-card_text {
-    max-width: 214px;
+    max-width: 57.067vw;
   }
   .advantages-card_title {
     color: #FFF;
     font-family: Manrope;
-    font-size: 30px;
+    font-size: 8vw;
     font-style: normal;
     font-weight: 600;
-    line-height: 100%; /* 30px */
-    letter-spacing: -1.5px;
+    line-height: 100%; /* 8vw */
+    letter-spacing: -0.4vw;
     text-transform: uppercase;
   }
   .advantages-card_text {
-    padding-left: 15px;
+    padding-left: 4vw;
     margin-left: auto;
   }
   .text-16 {
     color: #808080;
     font-family: Manrope;
-    font-size: 14px;
+    font-size: 3.733vw;
     font-style: normal;
     font-weight: 500;
-    line-height: 125%; /* 17.5px */
-    letter-spacing: -0.42px;
+    line-height: 125%; /* 4.667vw */
+    letter-spacing: -0.112vw;
   }
   .presentation {
-    gap: 20px;
-    padding: 50px 0;
+    gap: 5.333vw;
+    padding: 13.333vw 0;
   }
   .presentation .presentation-header {
-    gap: 24px;
+    gap: 6.4vw;
     justify-content: space-between;
   }
   .presentation .presentation-text {
     color: #404040;
     font-family: Manrope;
-    font-size: 32px;
+    font-size: 8.533vw;
     font-style: normal;
     font-weight: 500;
     line-height: 105%;
-    letter-spacing: -1.6px;
+    letter-spacing: -0.427vw;
     text-transform: uppercase;
     width: 100%;
   }
@@ -1603,12 +1603,12 @@ footer .footer-bottom p {
     height: auto;
   }
   .cta {
-    padding: 50px 0;
+    padding: 13.333vw 0;
   }
   .cta .wrapper {
     display: flex;
     flex-direction: column-reverse;
-    gap: 190px;
+    gap: 50.667vw;
   }
   .cta .cta_left {
     flex-direction: row;
@@ -1617,58 +1617,58 @@ footer .footer-bottom p {
     height: 100%;
   }
   .cta .cta_left p {
-    max-width: 180px;
+    max-width: 48vw;
   }
   .cta .cta_right {
-    gap: 50px;
+    gap: 13.333vw;
   }
   .cta .cta-header {
     color: #FFF;
     font-family: Manrope;
-    font-size: 66px;
+    font-size: 17.6vw;
     font-style: normal;
     font-weight: 500;
-    line-height: 90%; /* 59.4px */
-    letter-spacing: -2.64px;
+    line-height: 90%; /* 15.84vw */
+    letter-spacing: -0.704vw;
     text-transform: uppercase;
   }
   .cta .cta-header span {
     font-family: Gallient;
-    font-size: 59px;
+    font-size: 15.733vw;
     font-style: normal;
     font-weight: 400;
-    line-height: 100%; /* 59px */
-    letter-spacing: -1.18px;
+    line-height: 100%; /* 15.733vw */
+    letter-spacing: -0.315vw;
     text-transform: uppercase;
   }
   .cta .cta-content {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 6.667vw;
   }
   .cta .cta-description {
     color: #404040;
     font-family: Manrope;
-    font-size: 20px;
+    font-size: 5.333vw;
     font-style: normal;
     font-weight: 500;
-    line-height: 120%; /* 24px */
-    letter-spacing: -0.8px;
+    line-height: 120%; /* 6.4vw */
+    letter-spacing: -0.213vw;
     width: 100%;
   }
   .who-we {
-    padding: 50px 0;
+    padding: 13.333vw 0;
     width: 100vw;
-    gap: 25px;
+    gap: 6.667vw;
   }
   .who-we h2 {
     color: #FFF;
     font-family: Manrope;
-    font-size: 128px;
+    font-size: 34.133vw;
     font-style: normal;
     font-weight: 500;
-    line-height: 90%; /* 115.2px */
-    letter-spacing: -6.4px;
+    line-height: 90%; /* 30.72vw */
+    letter-spacing: -1.707vw;
     text-transform: uppercase;
   }
   .who-we .wrapper {
@@ -1684,52 +1684,52 @@ footer .footer-bottom p {
     display: none;
   }
   .who-we .who-we_right {
-    gap: 20px;
+    gap: 5.333vw;
   }
   .who-we .who-we_right-title {
     color: #FFF;
     font-family: Manrope;
-    font-size: 20px;
+    font-size: 5.333vw;
     font-style: normal;
     font-weight: 500;
-    line-height: 110%; /* 22px */
-    letter-spacing: -0.8px;
+    line-height: 110%; /* 5.867vw */
+    letter-spacing: -0.213vw;
     text-transform: uppercase;
   }
   .who-we .who-we_right-content {
     color: #808080;
     font-family: Manrope;
-    font-size: 16px;
+    font-size: 4.267vw;
     font-style: normal;
     font-weight: 500;
-    line-height: 125%; /* 20px */
-    letter-spacing: -0.48px;
+    line-height: 125%; /* 5.333vw */
+    letter-spacing: -0.128vw;
     flex-direction: column;
-    gap: 30px;
+    gap: 8vw;
   }
   .who-we .who-we_right-content p {
     width: unset;
   }
   .get-closer {
-    padding: 50px 0;
+    padding: 13.333vw 0;
   }
   .get-closer .wrapper {
-    gap: 20px;
+    gap: 5.333vw;
   }
   .get-closer .wrapper h2 {
     color: #FFF;
     font-family: Manrope;
-    font-size: 32px;
+    font-size: 8.533vw;
     font-style: normal;
     font-weight: 500;
-    line-height: 100%; /* 32px */
-    letter-spacing: -1.6px;
+    line-height: 100%; /* 8.533vw */
+    letter-spacing: -0.427vw;
     text-transform: uppercase;
     width: unset;
   }
   .get-closer .get-closer_content {
     flex-direction: column;
-    gap: 30px;
+    gap: 8vw;
     justify-content: space-between;
     align-items: flex-end;
   }
@@ -1738,12 +1738,12 @@ footer .footer-bottom p {
   }
   .get-closer .get-closer_video-container {
     width: 100%;
-    height: 410px;
+    height: 109.333vw;
     overflow: hidden;
   }
   .get-closer .get-closer_video-container .get-closer_video-wrapper {
     width: 100%;
-    height: 410px;
+    height: 109.333vw;
     position: relative;
   }
   .get-closer .get-closer_video-container .get-closer_video-preview {
@@ -1751,71 +1751,71 @@ footer .footer-bottom p {
     height: auto;
   }
   .get-closer .get-closer_video-container .get-closer_video-play {
-    width: 45px;
-    height: 45px;
+    width: 12vw;
+    height: 12vw;
   }
   .partners {
-    padding: 50px 0;
+    padding: 13.333vw 0;
   }
   .partners h2 {
     color: #FFF;
     font-family: Manrope;
-    font-size: 66px;
+    font-size: 17.6vw;
     font-style: normal;
     font-weight: 500;
-    line-height: 100%; /* 66px */
-    letter-spacing: -3.3px;
+    line-height: 100%; /* 17.6vw */
+    letter-spacing: -0.88vw;
     text-transform: uppercase;
   }
   .partners h2 span {
     color: #FFF;
     font-family: Gallient;
-    font-size: 59px;
+    font-size: 15.733vw;
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
-    letter-spacing: -1.18px;
+    letter-spacing: -0.315vw;
     text-transform: uppercase;
   }
   .partners .partners_runline {
-    margin-top: 10px;
+    margin-top: 2.667vw;
   }
   .partners .partners_runline-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0px;
+    gap: 0vw;
   }
   .partners .partners_card {
-    width: 220px;
-    height: 220px;
+    width: 58.667vw;
+    height: 58.667vw;
     flex-shrink: 0;
   }
   .partners .partners_card:not(:first-child) {
-    margin-top: -60px;
+    margin-top: -16vw;
   }
   .partners .partners_card img {
-    width: 140px;
-    height: 140px;
+    width: 37.333vw;
+    height: 37.333vw;
   }
   .button {
     color: #FFF;
     font-family: Manrope;
-    font-size: 18px;
+    font-size: 4.8vw;
     font-style: normal;
     font-weight: 400;
     line-height: 100%;
-    letter-spacing: -1.08px;
+    letter-spacing: -0.288vw;
     text-transform: uppercase;
   }
   .button:not(.no-underline)::before {
-    height: 1.5px;
+    height: 0.4vw;
   }
   footer {
-    border-top: 1px solid #202020;
-    padding-top: 40px;
-    margin-top: 50px;
-    padding-bottom: 60px;
+    border-top: 0.267vw solid #202020;
+    padding-top: 10.667vw;
+    margin-top: 13.333vw;
+    padding-bottom: 16vw;
   }
   footer .wrapper {
     display: flex;
@@ -1827,59 +1827,59 @@ footer .footer-bottom p {
     justify-content: space-between;
   }
   footer .footer_left {
-    gap: 40px;
+    gap: 10.667vw;
   }
   footer .footer_left_link-grid {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 10.667vw;
     align-items: center;
   }
   footer .footer_link-block {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 3.2vw;
   }
   footer .footer_link-block.big .button {
     color: #FFF;
     text-align: center;
     font-family: Manrope;
-    font-size: 26px;
+    font-size: 6.933vw;
     font-style: normal;
     font-weight: 400;
-    line-height: 100%; /* 26px */
-    letter-spacing: -1.56px;
+    line-height: 100%; /* 6.933vw */
+    letter-spacing: -0.416vw;
     text-transform: uppercase;
   }
   footer .footer_right {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 10.667vw;
   }
   footer .footer_socials {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 4vw;
   }
   footer .footer_socials ul {
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 12px;
+    gap: 3.2vw;
   }
   footer .footer-socials-button {
-    padding: 15px 20px;
+    padding: 4vw 5.333vw;
     text-align: center;
-    border-radius: 30px;
-    border: 1px solid #808080;
+    border-radius: 8vw;
+    border: 0.267vw solid #808080;
   }
   footer .footer_privacy {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 4vw;
   }
   footer .footer-bottom {
     display: none;
@@ -1888,11 +1888,11 @@ footer .footer-bottom p {
     color: #FFF;
     text-align: center;
     font-family: Manrope;
-    font-size: 18px;
+    font-size: 4.8vw;
     font-style: normal;
     font-weight: 500;
-    line-height: 100%; /* 18px */
-    letter-spacing: -0.72px;
+    line-height: 100%; /* 4.8vw */
+    letter-spacing: -0.192vw;
     text-transform: uppercase;
     display: block;
   }
@@ -1910,7 +1910,7 @@ footer .footer-bottom p {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 324px;
+    width: 86.4vw;
     height: auto;
   }
   #video-popup-container {
@@ -1931,7 +1931,7 @@ footer .footer-bottom p {
     z-index: 998;
     width: 2.604vw;
     height: 2.604vw;
-    border-radius: 20px;
+    border-radius: 5.333vw;
     font-size: 1.146vw;
     background-color: #000;
     line-height: 1.302vw;
