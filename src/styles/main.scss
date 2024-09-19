@@ -5,11 +5,15 @@
 }
 
 @import '../styles/history.scss';
+@import "contacts.scss";
 
 html {
   overflow-x: hidden;
 }
 
+body {
+  background: #000000;
+}
 
 body {
   background: #000000;
@@ -900,122 +904,4 @@ footer {
 
 #video-popup-close:hover {
   border-color: white;
-}
-
-
-.contacts {
-  display: flex;
-  flex-direction: column;
-
-  &__input {
-    width: 93.6vw;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    order: 1;
-
-    &_title {
-      margin: 0;
-      margin-top: 31.2vw;
-      font-weight: 500;
-      font-size: 15.47vw;
-      text-transform: uppercase;
-      line-height: 13.92vw;
-      color: #FFFFFF;
-      letter-spacing: -0.1vw;
-    }
-
-    &-form {
-      display: flex;
-      width: 93.6vw;
-      flex-direction: column;
-      margin: auto;
-      margin-top: 10.67vw;
-    }
-
-    &-btn {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      margin-top: 1.33vw;
-      height: 17.86vw;
-      background-color: transparent;
-      border: none;
-      border-top: 1px solid #D9D9D9;
-      border-bottom: 1px solid #D9D9D9;
-      text-transform: uppercase;
-      font-weight: 500;
-      font-size: 4.8vw;
-      line-height: 6.56vw;
-      letter-spacing: -0.1vw;
-      color: #FFFFFF;
-      order: 1;
-
-      &-arrow {
-        margin-left: 2.67vw;
-      }
-    }
-  }
-
-  &__information {
-    display: flex;
-    flex-direction: column;
-    width: 93.6vw;
-    margin: auto;
-    margin-top: 24vw;
-    order: 2;
-
-    &-text {
-      order: 1;
-    }
-
-    &_block {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-      font-weight: 500;
-      font-size: 5.3vw;
-      line-height: 5.3vw;
-      letter-spacing: -0.1vw;
-      text-transform: uppercase;
-      margin-bottom: 9.3vw;
-
-      &:first-child {
-        width: 64vw;
-      }
-
-      &-name {
-        color: #404040;
-        width: 26.93vw;
-      }
-
-      &-description {
-        color: #FFFFFF;
-      }
-
-      &-media {
-        display: flex;
-        flex-direction: row;
-        gap: 5px;
-        margin-top: 4vw;
-
-        &-icon {
-          width: 24vw;
-          height: 24vw;
-          border: 1px solid #FFFFFF;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          &-img {
-            width: 6.7vw;
-            height: 6.7vw;
-          }
-        }
-      }
-    }
-  }
 }
