@@ -1,21 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
-    integrity="sha256-WAgYcAck1C1/zEl5sBl5cfyhxtLgKGdpI3oKyJffVRI="
-    crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
+@include("../partials/head.html", {
+    pageName: "Golovinski - Contacts",
+    additionalLinks : []
+})
+    
 <body class="base">
+    @include("../partials/header.html")
+    @include("../partials/loader.html")
     <section class="preview">
         <h4 class="preview__title">Technologies of the magic of Golovinski</h4>
         <div class="preview__title-history">
