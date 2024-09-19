@@ -51,7 +51,15 @@ function handleFillableText() {
 
 window.addEventListener('DOMContentLoaded', (event) => {
   window.scrollTo(0,0)
-  
+  window.onbeforeunload = function() {
+    window.scrollTo(0, 0);
+  };
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+
+
+
   // split text into words
   new SplitType('[text-split]', {
     types:
