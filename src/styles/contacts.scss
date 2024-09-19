@@ -1,15 +1,4 @@
-
-
-.contacts {
-  font-family: Manrope !important;
-  display: flex;
-  flex-direction: column;
-  
-  input{
-    font-family: Manrope;
-    font-weight: 500;
-  }
-  
+@media screen and (max-width: 900px) {
   .contacts__input-form label{
     color: #FFF;
     font-family: Manrope;
@@ -21,6 +10,19 @@
     text-transform: uppercase;
     margin-bottom: 4vw;
   }
+}
+
+.contacts {
+  font-family: Manrope !important;
+  display: flex;
+  flex-direction: column;
+  
+  input{
+    font-family: Manrope;
+    font-weight: 500;
+  }
+  
+  
 
   .message-container{
     input{

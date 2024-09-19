@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: Gallient;
   src: url("./fonts/Gallient.woff") format("woff");
@@ -5,6 +6,10 @@
 }
 :root {
   --delay-transition: all 1.75s cubic-bezier(0.6, 0.05, 0.1, 1);
+}
+
+body {
+  font-family: Manrope;
 }
 
 .history {
@@ -265,6 +270,19 @@
   opacity: 1 !important;
 }
 
+@media screen and (max-width: 900px) {
+  .contacts__input-form label {
+    color: #FFF;
+    font-family: Manrope;
+    font-size: 3.467vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.139vw;
+    text-transform: uppercase;
+    margin-bottom: 4vw;
+  }
+}
 .contacts {
   font-family: Manrope !important;
   display: flex;
@@ -273,17 +291,6 @@
 .contacts input {
   font-family: Manrope;
   font-weight: 500;
-}
-.contacts .contacts__input-form label {
-  color: #FFF;
-  font-family: Manrope;
-  font-size: 3.467vw;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: -0.139vw;
-  text-transform: uppercase;
-  margin-bottom: 4vw;
 }
 .contacts .message-container input {
   width: 100%;
@@ -1099,6 +1106,7 @@ header nav {
 
 .partners {
   padding-bottom: 7.292vw;
+  overflow: hidden;
 }
 .partners h2 {
   color: #FFF;
@@ -1122,10 +1130,19 @@ header nav {
 }
 .partners .partners_runline {
   margin-top: -4.844vw;
+  display: flex;
+  flex-direction: row;
+}
+@keyframes runlineScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Прокрутка на половину ширини обгортки */
+  }
 }
 .partners .partners_runline-item {
   display: flex;
-  flex-wrap: wrap;
   gap: 1.042vw;
 }
 .partners .partners_card {
@@ -1779,6 +1796,8 @@ footer .footer-bottom p {
   }
   .partners .partners_runline {
     margin-top: 2.667vw;
+    align-items: center;
+    justify-content: center;
   }
   .partners .partners_runline-item {
     display: flex;
@@ -1917,10 +1936,11 @@ footer .footer-bottom p {
     display: none;
     position: fixed;
     z-index: 996;
-    width: 60%;
+    width: 90%;
     left: 50%;
     top: 20%;
-    margin-left: -30%;
+    margin-left: 0;
+    transform: translateX(-50%);
     background-color: #fff;
   }
   #video-popup-close {
@@ -1929,10 +1949,10 @@ footer .footer-bottom p {
     right: -0.521vw;
     top: -0.521vw;
     z-index: 998;
-    width: 2.604vw;
-    height: 2.604vw;
+    width: 6.667vw;
+    height: 6.667vw;
     border-radius: 5.333vw;
-    font-size: 1.146vw;
+    font-size: 4.146vw;
     background-color: #000;
     line-height: 1.302vw;
     color: #fff;
@@ -1944,7 +1964,7 @@ footer .footer-bottom p {
     position: absolute;
     z-index: 997;
     width: 100%;
-    padding-bottom: 56.25%;
+    padding-bottom: 121.25%;
     border: 0.104vw solid #000;
     border-radius: 0.104vw;
     background-color: #000;

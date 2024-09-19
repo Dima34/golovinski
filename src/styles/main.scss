@@ -614,6 +614,7 @@ header {
 
 .partners {
   padding-bottom: 7.292vw;
+  overflow: hidden;
 
   h2 {
     color: #FFF;
@@ -639,11 +640,21 @@ header {
 
   .partners_runline {
     margin-top: -4.844vw;
+    display: flex;
+    flex-direction: row;
+  }
+
+  @keyframes runlineScroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%); /* Прокрутка на половину ширини обгортки */
+    }
   }
 
   .partners_runline-item {
     display: flex;
-    flex-wrap: wrap;
     gap: 1.042vw;
   }
 
@@ -1392,6 +1403,8 @@ footer {
 
     .partners_runline {
       margin-top: 2.667vw;
+      align-items: center;
+      justify-content: center;
     }
 
     .partners_runline-item {
@@ -1565,10 +1578,11 @@ footer {
     display: none;
     position: fixed;
     z-index: 996;
-    width: 60%;
+    width: 90%;
     left: 50%;
     top: 20%;
-    margin-left: -30%;
+    margin-left: 0;
+    transform: translateX(-50%);
     background-color: #fff;
   }
 
@@ -1578,10 +1592,10 @@ footer {
     right: -0.521vw;
     top: -0.521vw;
     z-index: 998;
-    width: 2.604vw;
-    height: 2.604vw;
+    width: 6.667vw;
+    height: 6.667vw;
     border-radius: 5.333vw;
-    font-size: 1.146vw;
+    font-size: 4.146vw;
     background-color: #000;
     line-height: 1.302vw;
     color: #fff;
@@ -1594,7 +1608,7 @@ footer {
     position: absolute;
     z-index: 997;
     width: 100%;
-    padding-bottom: 56.25%;
+    padding-bottom: 121.25%;
     border: 0.104vw solid #000;
     border-radius: 0.104vw;
     background-color: #000;

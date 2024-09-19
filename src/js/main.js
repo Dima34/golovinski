@@ -1,5 +1,3 @@
-import ScrollSmoother from "./ScrollSmoother.js";
-
 function handlePresentationVideo() {
   const presentationVideo = document.querySelector('.presentation_video')
 
@@ -57,9 +55,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
   }
-
-
-
+  
   // split text into words
   new SplitType('[text-split]', {
     types:
@@ -73,7 +69,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     tagName: 'span',
   })
   
-  gsap.registerPlugin(GSDevTools, ScrollTrigger, ScrollSmoother);
+  gsap.registerPlugin(GSDevTools, ScrollTrigger);
   //
   // ScrollSmoother.create({
   //   wrapper: '#smooth-wrapper',
@@ -341,13 +337,10 @@ function handlePlateRotation() {
     startOscillation();
   } else if(!isMobile()){
     segmetsData = stopOscillationAndGetSegments();
-    console.log(segmetsData)
 
     handleSegmentRotation(scrollFromTopPX,segmetsData);
   }
 }
-
-
 
 let oscillating = false;
 let oscillationInterval = null;
@@ -373,3 +366,30 @@ window.addEventListener('scroll', () => {
 });
 
 preloadImages()
+
+
+if(!isMobile()){
+function initRunline(runlineSelector, numberOfDuplicates = 13) {
+  const runlineWrapper = document.querySelector(`${runlineSelector} .partners_runline`);
+  const runlineItem = document.querySelector(`${runlineSelector} .partners_runline-item`);
+
+  runlineWrapper.style.animation = "runlineScroll 30s linear infinite"
+  
+  if (!runlineWrapper || !runlineItem) {
+    console.error("Не вдалося знайти потрібні елементи для стрічки:", runlineSelector);
+    return;
+  }
+
+  // Дублюємо елемент необхідну кількість разів
+  for (let i = 0; i < numberOfDuplicates; i++) {
+    const clone = runlineItem.cloneNode(true);
+    runlineWrapper.appendChild(clone);
+  }
+}
+
+// Використання функції для різних стрічок на сторінці
+document.addEventListener("DOMContentLoaded", function() {
+  // важливо ставити непарне число, щоб після генерації, стало парне
+  initRunline(".partners", 13); // Вказуємо селектор і кількість дублювань
+});
+}

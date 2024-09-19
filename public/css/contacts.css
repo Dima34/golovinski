@@ -1,3 +1,16 @@
+@media screen and (max-width: 900px) {
+  .contacts__input-form label {
+    color: #FFF;
+    font-family: Manrope;
+    font-size: 3.467vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.139vw;
+    text-transform: uppercase;
+    margin-bottom: 4vw;
+  }
+}
 .contacts {
   font-family: Manrope !important;
   display: flex;
@@ -6,17 +19,6 @@
 .contacts input {
   font-family: Manrope;
   font-weight: 500;
-}
-.contacts .contacts__input-form label {
-  color: #FFF;
-  font-family: Manrope;
-  font-size: 3.467vw;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: -0.139vw;
-  text-transform: uppercase;
-  margin-bottom: 4vw;
 }
 .contacts .message-container input {
   width: 100%;
