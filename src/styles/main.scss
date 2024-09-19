@@ -1735,3 +1735,363 @@ input[type="text"], input[type="email"] {
 .icon {
     order: 2;
 }
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: Manrope;
+	background-color: #000000;
+}
+
+.header {
+	width: 95vw; 
+	margin: auto;
+	margin-bottom: 14.6vw; 
+}
+  
+.header__title {
+	width: 55vw; 
+	margin: 0;
+	margin-top: 9.2vw;
+	margin-left: auto;
+	font-weight: 500;
+	font-size: 6.15vw;
+	line-height: 6vw; 
+	letter-spacing: -0.002vw;
+	color: #fff;
+	text-transform: uppercase;
+	position: relative;
+	z-index: 1; 
+}
+  
+img {
+	width: 38.8vw; 
+	height: 47.7vw; 
+	margin-top: -5.7vw;
+	margin-left: 11.4vw; 
+	z-index: 0; 
+}
+
+.header__title-history {
+	display: flex;
+	flex-direction: row;
+}
+
+.header__title-history-btn {
+	padding: 1.2vw; 
+	width: 4.2vw; 
+	height: 4.2vw; 
+	border-radius: 50%;
+	border: 0.05vw dashed #fff;
+	background-color: transparent;
+	cursor: pointer;
+	margin-top: auto;
+}
+  
+.header__title-history-btn-icon {
+	margin: 0;
+	width: 1.6vw; 
+	height: 1.6vw; 
+	transform: rotate(45deg);
+}
+
+.header__description {
+	margin-left: 9.1vw; 
+	margin-top: 30.1vw; 
+	display: flex;
+	gap: 1vw;
+}
+
+.header__description-text {
+	width: 14.9vw; 
+	margin: 0;
+	font-size: 0.83vw;
+	line-height: 1.08vw; 
+	letter-spacing: -0.0015vw; 
+	color: #fff;
+	text-align: justify;
+}
+
+.main {
+	width: 95vw; 
+	margin: auto;
+}
+
+.main__title {
+	width: 40vw; 
+	margin: 0;
+	margin-bottom: 7.3vw; 
+	font-weight: 500;
+	font-size: 3.54vw;
+	line-height: 3.39vw; 
+	letter-spacing: -0.002vw; 
+	color: #fff;
+	text-transform: uppercase;
+}
+
+.main__list_mobile {
+	display: none;
+}
+
+.main__list {
+	width: 62.9vw;
+	margin-left: auto;
+	margin-bottom: 14.6vw;
+}
+
+.main__list-all {
+	margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.main__list-item {
+    display: flex;
+    color: #fff;
+    position: relative;
+	border-bottom: 0.05vw solid #404040;
+	margin-bottom: 1.6vw; 
+}
+
+.main__list-item:last-child {
+	margin-bottom: 0;
+}
+
+.main__list-item-marker {
+    display: flex;
+    align-items: flex-start;
+    font-size: 1.25vw; 
+	line-height: 1.12vw; 
+	letter-spacing: -0.002vw; 
+    font-weight: 500;
+    position: relative;
+}
+
+.main__list-item-marker-name::before {
+    content: '';
+    min-width: 0.78vw; 
+    min-height: 0.78vw;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 0.52vw; 
+}
+
+.main__list-item-marker-name {
+	width: 20.8vw;
+    text-transform: uppercase;
+    margin-right: 1vw; 
+}
+
+.main__list-item-description {
+	margin: 0;
+    margin-top: 0; 
+	width: 22.9vw; 
+	padding-bottom: 1.6vw; 
+	text-align: justify;
+    line-height: 1.08vw; 
+    font-size: 0.78vw; 
+	font-weight: 500;
+	letter-spacing: -0.0015vw;
+    color: #808080;
+	margin-left: 3.2vw; 
+}
+
+.main__list-item-marker-number {
+    font-size: 0.94vw;
+	line-height: 1.17vw; 
+	letter-spacing: -0.002vw; 
+	font-weight: 500;
+    color: #404040;
+	white-space: nowrap;
+	margin-left: 13vw; 
+}
+
+.footer {
+	width: 95vw;
+	margin: auto;
+}
+
+.footer__description {
+	font-size: 2.34vw; 
+	line-height: 2.88vw; 
+	letter-spacing: -0.002vw;
+	margin-bottom: 6.3vw; 
+}
+
+.footer__description-partone {
+	text-indent: 9.2vw; 
+	display: block;
+	color: #fff;
+}
+
+.footer__description-parttwo {
+	text-indent: 0;
+	color: #404040;
+}
+
+.footer__signature {
+	padding: 6.3vw 0 6.3vw 79vw; 
+	font-weight: 500;
+	font-size: 1.04vw; 
+	line-height: 1.04vw; 
+	letter-spacing: -0.002vw; 
+	color: #fff;
+	text-transform: uppercase;
+}
+
+
+@media screen and (width < 900px) {
+	.header {
+		width: 93.6vw; 
+		margin-bottom: 24vw; 
+	}
+	
+	.header__title {
+		width: 93.6vw;
+		margin-top: 31.2vw;
+		font-size: 10.4vw; 
+		line-height: 10.1vw; 
+		letter-spacing: -0.01vw; 
+		color: #fff;
+		text-transform: uppercase;
+	}
+	
+	.header__title-history {
+		flex-direction: column;
+	}
+	
+	.header__title-history-btn {
+		display: none;
+	}
+	
+	img {
+		width: 68.8vw; 
+		height: 84.5vw; 
+		margin: 6.7vw 0 6.7vw 24.8vw; 
+	}
+	
+	.header__description {
+		margin: 0;
+		flex-direction: column;
+	}
+	
+	.header__description-text {
+		width: 93.6vw; 
+		font-size: 4vw; 
+		line-height: 5.6vw;
+		letter-spacing: -0.008vw; 
+		color: #fff;
+		text-align: left;
+	}
+	
+	.main {
+		width: 93.6vw; 
+	}
+	
+	.main__title {
+		width: 93.6vw; 
+		margin-bottom: 13.3vw; 
+		font-size: 10.4vw; 
+		line-height: 10.1vw; 
+		letter-spacing: -0.01vw; 
+		color: #fff;
+		text-transform: uppercase;
+	}
+	
+	.main__list_mobile {
+		display: block;
+	}
+	
+	.main__list {
+		display: none;
+	}
+	  
+	.main__list_mobile-item {
+		display: flex;
+		flex-direction: column;
+		color: #fff;
+		position: relative;
+		border-bottom: 0.27vw solid #404040; 
+		margin-bottom: 5.3vw; 
+	}
+	
+	.main__list_mobile-item:last-child {
+		margin-bottom: 0;
+	}
+	  
+	.main__list_mobile-item-marker {
+		display: flex;
+		align-items: center;
+		font-size: 5.9vw; 
+		line-height: 5.3vw; 
+		letter-spacing: -0.01vw; 
+		font-weight: 500;
+		position: relative;
+	}
+	
+	.main__list_mobile-item-marker::before {
+		content: '';
+		min-width: 3.2vw;
+		min-height: 3.2vw;
+		background-color: white;
+		border-radius: 50%;
+		display: inline-block;
+		margin-right: 2.1vw; 
+	}
+	
+	.main__list_mobile-item-marker-name {
+		text-transform: uppercase;
+		margin-right: auto;
+	}
+	
+	.main__list_mobile-item-marker-number {
+		font-size: 4.3vw; 
+		line-height: 5.3vw; 
+		letter-spacing: -0.01vw; 
+		font-weight: 500;
+		color: #404040;
+		white-space: nowrap;
+	}
+	
+	.main__list_mobile-item-description {
+		margin: 0;
+		margin-top: 3.2vw; 
+		padding-bottom: 5.3vw; 
+		line-height: 5.6vw; 
+		font-size: 4vw; 
+		font-weight: 500;
+		letter-spacing: -0.008vw; 
+		color: #808080;
+	}
+	
+	.footer {
+		width: 93.6vw;
+		margin-top: 24vw;
+	}
+	
+	.footer__description {
+		font-size: 6.1vw; 
+		line-height: 7.6vw; 
+		letter-spacing: -0.01vw; 
+		margin-bottom: 8vw; 
+	}
+	
+	.footer__description-partone {
+		text-indent: 20.5vw; 
+		color: #fff;
+	}
+	
+	.footer__signature {
+		padding: 8vw 0 8vw 17.9vw; 
+		font-size: 4.9vw; 
+		line-height: 5.3vw; 
+		letter-spacing: -0.01vw; 
+		color: #fff;
+		text-transform: uppercase;
+	}
+	
+}
+
