@@ -13,12 +13,12 @@ html {
 
 body {
   background: #000000;
-}
-
-body {
-  background: #000000;
   -webkit-font-smoothing: antialiased;
   color: #FFF;
+}
+
+input{
+  color: white;
 }
 
 body:not(.loaded) {
