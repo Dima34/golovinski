@@ -1740,18 +1740,18 @@ input[type="text"], input[type="email"] {
 	box-sizing: border-box;
 }
 
-html {
+.base {
 	font-family: Manrope;
 	background-color: #000000;
 }
 
-.header {
+.preview {
 	width: 95vw; 
 	margin: auto;
 	margin-bottom: 14.6vw; 
 }
   
-.header__title {
+.preview__title {
 	width: 55vw; 
 	margin: 0;
 	margin-top: 9.2vw;
@@ -1766,7 +1766,7 @@ html {
 	z-index: 1; 
 }
   
-img {
+.preview__title-history-img {
 	width: 38.8vw; 
 	height: 47.7vw; 
 	margin-top: -5.7vw;
@@ -1774,12 +1774,12 @@ img {
 	z-index: 0; 
 }
 
-.header__title-history {
+.preview__title-history {
 	display: flex;
 	flex-direction: row;
 }
 
-.header__title-history-btn {
+.preview__title-history-btn {
 	padding: 1.2vw; 
 	width: 4.2vw; 
 	height: 4.2vw; 
@@ -1790,21 +1790,21 @@ img {
 	margin-top: auto;
 }
   
-.header__title-history-btn-icon {
+.preview__title-history-btn-icon {
 	margin: 0;
 	width: 1.6vw; 
 	height: 1.6vw; 
 	transform: rotate(45deg);
 }
 
-.header__description {
+.preview__description {
 	margin-left: 9.1vw; 
 	margin-top: 30.1vw; 
 	display: flex;
 	gap: 1vw;
 }
 
-.header__description-text {
+.preview__description-text {
 	width: 14.9vw; 
 	margin: 0;
 	font-size: 0.83vw;
@@ -1909,30 +1909,30 @@ img {
 	margin-left: 13vw; 
 }
 
-.footer {
+.end {
 	width: 95vw;
 	margin: auto;
 }
 
-.footer__description {
+.end__description {
 	font-size: 2.34vw; 
 	line-height: 2.88vw; 
 	letter-spacing: -0.002vw;
 	margin-bottom: 6.3vw; 
 }
 
-.footer__description-partone {
+.end__description-partone {
 	text-indent: 9.2vw; 
 	display: block;
 	color: #fff;
 }
 
-.footer__description-parttwo {
+.end__description-parttwo {
 	text-indent: 0;
 	color: #404040;
 }
 
-.footer__signature {
+.end__signature {
 	padding: 6.3vw 0 6.3vw 79vw; 
 	font-weight: 500;
 	font-size: 1.04vw; 
@@ -1944,12 +1944,12 @@ img {
 
 
 @media screen and (width < 900px) {
-	.header {
+	.preview {
 		width: 93.6vw; 
 		margin-bottom: 24vw; 
 	}
 	
-	.header__title {
+	.preview__title {
 		width: 93.6vw;
 		margin-top: 31.2vw;
 		font-size: 10.4vw; 
@@ -1959,26 +1959,26 @@ img {
 		text-transform: uppercase;
 	}
 	
-	.header__title-history {
+	.preview__title-history {
 		flex-direction: column;
 	}
 	
-	.header__title-history-btn {
+	.preview__title-history-btn {
 		display: none;
 	}
 	
-	img {
+	.preview__title-history-img {
 		width: 68.8vw; 
 		height: 84.5vw; 
 		margin: 6.7vw 0 6.7vw 24.8vw; 
 	}
 	
-	.header__description {
+	.preview__description {
 		margin: 0;
 		flex-direction: column;
 	}
 	
-	.header__description-text {
+	.preview__description-text {
 		width: 93.6vw; 
 		font-size: 4vw; 
 		line-height: 5.6vw;
@@ -2067,24 +2067,24 @@ img {
 		color: #808080;
 	}
 	
-	.footer {
+	.end {
 		width: 93.6vw;
 		margin-top: 24vw;
 	}
 	
-	.footer__description {
+	.end__description {
 		font-size: 6.1vw; 
 		line-height: 7.6vw; 
 		letter-spacing: -0.01vw; 
 		margin-bottom: 8vw; 
 	}
 	
-	.footer__description-partone {
+	.end__description-partone {
 		text-indent: 20.5vw; 
 		color: #fff;
 	}
 	
-	.footer__signature {
+	.end__signature {
 		padding: 8vw 0 8vw 17.9vw; 
 		font-size: 4.9vw; 
 		line-height: 5.3vw; 
@@ -2094,4 +2094,3 @@ img {
 	}
 	
 }
-
