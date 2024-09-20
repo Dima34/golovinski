@@ -31,6 +31,15 @@ a {
   text-decoration: none;
 }
 
+input {
+  outline: none;
+  background: 0;
+  border: 0;
+}
+input:focus {
+  outline: none;
+}
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
