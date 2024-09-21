@@ -1,3 +1,5 @@
+import ScrollSmoother from "./ScrollSmoother.js";
+
 function handlePresentationVideo() {
   const presentationVideo = document.querySelector('.presentation_video')
 
@@ -69,14 +71,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
     tagName: 'span',
   })
   
-  gsap.registerPlugin(GSDevTools, ScrollTrigger);
-  //
-  // ScrollSmoother.create({
-  //   wrapper: '#smooth-wrapper',
-  //   content: '#smooth-content',
-  //   smooth: 2, // how long (in seconds) it takes to "catch up" to the native scroll position
-  //   smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
-  // });
+  gsap.registerPlugin(GSDevTools, ScrollTrigger, ScrollSmoother);
+
+  ScrollSmoother.create({
+    wrapper: '#smooth-wrapper',
+    content: '#smooth-content',
+    smooth: 2, // how long (in seconds) it takes to "catch up" to the native scroll position
+    smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
+  });
 
 
   const heroTitle = document.querySelector('.hero_title')
