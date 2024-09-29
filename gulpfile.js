@@ -1,61 +1,72 @@
-import gulp from 'gulp'
-import browserSync from 'browser-sync'
+import gulp from 'gulp';
+import browserSync from 'browser-sync';
+import { filePaths } from './gulp/config/paths.js';
 
-import { paths } from './gulp/config/paths.js'
-import { clean } from './gulp/tasks/clean.js'
-import { svgSprites } from './gulp/tasks/sprite.js'
-import { styles } from './gulp/tasks/styles.js'
-import { stylesBackend } from './gulp/tasks/styles-backend.js'
-import { scripts } from './gulp/tasks/scripts.js'
-import { scriptsBackend } from './gulp/tasks/scripts-backend.js'
+/**
+ * Импорт задач
+ */
+import { copy } from './gulp/tasks/copy.js';
+import { copyRootFiles } from './gulp/tasks/copy-root-files.js';
+import { reset } from './gulp/tasks/reset.js';
+import { html } from './gulp/tasks/html.js';
+import { server } from './gulp/tasks/server.js';
+import { scss } from './gulp/tasks/scss.js';
+import { javascript } from './gulp/tasks/javascript.js';
+import { images } from './gulp/tasks/images.js';
+import { otfToTtf, ttfToWoff, fontStyle } from './gulp/tasks/fonts.js';
+import { createSvgSprite } from './gulp/tasks/create-svg-sprite.js';
+import { zip } from './gulp/tasks/zip.js';
+import { ftpDeploy } from './gulp/tasks/ftp-deploy.js';
 
-import { images } from './gulp/tasks/images.js'
-import { webpImages } from './gulp/tasks/webp.js'
-import { htmlInclude } from './gulp/tasks/html-include.js'
-import { cacheTask } from './gulp/tasks/cache.js'
-import { rewrite } from './gulp/tasks/rewrite.js'
-import { htmlMinify } from './gulp/tasks/html-minify.js'
-import { zipFiles } from './gulp/tasks/zip.js'
+const isBuild = process.argv.includes('--build');
+const browserSyncInstance = browserSync.create();
 
-global.app = {
-  gulp,
-  isProd: process.argv.includes('--build'),
-  paths
+const handleServer = server.bind(null, browserSyncInstance);
+const handleHTML = html.bind(null, isBuild, browserSyncInstance);
+const handleSCSS = scss.bind(null, isBuild, browserSyncInstance);
+const handleJS = javascript.bind(null, !isBuild, browserSyncInstance);
+const handleImages = images.bind(null, isBuild, browserSyncInstance);
+
+/**
+ * Наблюдатель за изменениями в файлах
+ */
+function watcher() {
+  gulp.watch(filePaths.watch.static, copy);
+  gulp.watch(filePaths.watch.html, handleHTML);
+  gulp.watch(filePaths.watch.scss, handleSCSS);
+  gulp.watch(filePaths.watch.js, handleJS);
+  gulp.watch(filePaths.watch.images,handleImages);
 }
 
-const watcher = () => {
-  browserSync.init({
-    server: {
-      baseDir: `${app.paths.base.build}`
-    },
-    notify: false,
-    port: 3000
-  })
+/**
+ * Последовательная обработка шрифтов
+ * */
+const fonts = gulp.series(otfToTtf, ttfToWoff, fontStyle);
 
-  gulp.watch(app.paths.srcScss, styles)
-  gulp.watch(app.paths.srcFullJs, scripts)
-  gulp.watch(`${app.paths.base.src}/pages/*.html`, htmlInclude)
-  gulp.watch(`${app.paths.base.src}/partials/*.html`, htmlInclude)
-  gulp.watch(`${app.paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`, images)
-  gulp.watch(`${app.paths.srcImgFolder}/**/**.{jpg,jpeg,png}`, webpImages)
-}
+/**
+ * Параллельные задачи в режиме разработки
+ * */
+const devTasks = gulp.parallel(copy, copyRootFiles, createSvgSprite, handleHTML, handleSCSS, handleJS, handleImages);
 
-const dev = gulp.series(htmlInclude, scripts, styles, watcher)
-const backend = gulp.series(
-  clean,
-  htmlInclude,
-  scriptsBackend,
-  stylesBackend,
-  svgSprites
-)
-const build = gulp.series(clean, htmlInclude, scripts, styles, htmlMinify)
-const cache = gulp.series(cacheTask, rewrite)
-const zip = zipFiles
+/**
+ * Основные задачи
+ * */
+const mainTasks = gulp.series(fonts, devTasks);
 
-export { dev }
-export { build }
-export { backend }
-export { cache }
-export { zip }
+/**
+ * Построение сценариев выполнения задач
+ * */
+const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, handleServer));
+const build = gulp.series(reset, mainTasks);
+const deployZIP = gulp.series(reset, mainTasks, zip);
+const deployFTP = gulp.series(reset, mainTasks, ftpDeploy);
 
-gulp.task('default', dev)
+/**
+ * Выполнение сценария по умолчанию
+ * */
+gulp.task('default', dev);
+
+/**
+ * Экспорт сценариев
+ * */
+export { dev, build, deployZIP, deployFTP, createSvgSprite };
