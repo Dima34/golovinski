@@ -1,21 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Page</title>
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
-    integrity="sha256-WAgYcAck1C1/zEl5sBl5cfyhxtLgKGdpI3oKyJffVRI="
-    crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
+@@include("./partials/head.html", {
+    pageName: "Golovinski - Contacts",
+    additionalLinks : []
+})
+    
 <body class="blogbody">
+    @@include("./partials/header.html")
+    @@include("./partials/loader.html")
     <section class="blog__header">
             <p class="blog__header-title">Discover our premium materials from the finest quarries, embodying the potential of nature</p>
             <span class="blog__header-subtitle">Get closer to Golivinsky ]</span>
@@ -23,28 +15,28 @@
     <section class="blog__image">
         <div class="blog__image_container">
             <div class="blog__image_container-block">
-                <img src="first.png" alt="Image 1">
+                <img src="./img/first.png" alt="Image 1">
                 <div class="blog__image_container-block-description">
                     <h2 class="blog__image_container-block-description-title">Labradorite Deposits Worldwide</h2>
                     <span class="blog__image_container-block-description-date">Latest Article (26.05.2024)</span>
                 </div>
             </div>
             <div class="blog__image_container-block">
-                <img src="second.png" alt="Image 2">
+                <img src="./img/second.png" alt="Image 2">
                 <div class="blog__image_container-block-description">
                     <h2 class="blog__image_container-block-description-title">Application of Volga Blue slabs</h2>
                     <span class="blog__image_container-block-description-date">Latest Article (12.08.2024)</span>
                 </div>
             </div>
             <div class="blog__image_container-block">
-                <img src="three.png" alt="Image 3">
+                <img src="./img/three.png" alt="Image 3">
                 <div class="blog__image_container-block-description">
                     <h2 class="blog__image_container-block-description-title">Stages of stone extraction</h2>
                     <span class="blog__image_container-block-description-date">Latest Article (14.07.2024)</span>
                 </div>
             </div>
             <div class="blog__image_container-block">
-                <img src="four.png" alt="Image 4">
+                <img src="./img/four.png" alt="Image 4">
                 <div class="blog__image_container-block-description">
                     <h2 class="blog__image_container-block-description-title">Advantages of labradorite</h2>
                     <span class="blog__image_container-block-description-date">Latest Article (07.05.2024)</span>
@@ -53,7 +45,7 @@
         </div>        
     </section>
     <section class="blog__article">
-        <img src="five.png" alt="Article Image">
+        <img src="./img/five.png" alt="Article Image">
         <div class="blog__article_text">
             <h2 class="blog__article_text-title">We invite you to production</h2>
             <span class="blog__article_text-date">july 14 — 2024</span>
@@ -62,28 +54,28 @@
     </section>
     <section class="block__imagephone">
         <div class="blog__imagephone_container-block">
-            <img src="phone-one.png" alt="Image 1">
+            <img src="./img/phone-one.png" alt="Image 1">
             <div class="blog__imagephone_container-block-description">
                 <h2 class="blog__imagephone_container-block-description-title">nEW DECISION in company</h2>
                 <span class="blog__imagephone_container-block-description-date">Latest Article (26.05.2024)</span>
             </div>
         </div>
         <div class="blog__imagephone_container-block">
-            <img src="phone-two.png" alt="Image 2">
+            <img src="./img/phone-two.png" alt="Image 2">
             <div class="blog__imagephone_container-block-description">
                 <h2 class="blog__imagephone_container-block-description-title">main changes in the company</h2>
                 <span class="blog__imagephone_container-block-description-date">Latest Article (12.08.2024)</span>
             </div>
         </div>
         <div class="blog__imagephone_container-block">
-            <img src="phone-three.png" alt="Image 3">
+            <img src="./img/phone-three.png" alt="Image 3">
             <div class="blog__imagephone_container-block-description">
                 <h2 class="blog__imagephone_container-block-description-title">our new building in Ukraine</h2>
                 <span class="blog__imagephone_container-block-description-date">Latest Article (14.07.2024)</span>
             </div>
         </div>
         <div class="blog__imagephone_container-block">
-            <img src="phone-four.png" alt="Image 4">
+            <img src="./img/phone-four.png" alt="Image 4">
             <div class="blog__imagephone_container-block-description">
                 <h2 class="blog__imagephone_container-block-description-title">new technology from europe</h2>
                 <span class="blog__imagephone_container-block-description-date">Latest Article (07.05.2024)</span>
@@ -92,21 +84,21 @@
     </section>
     <section class="blog__articlephone">
         <div class="blog__articlephone_container-block">
-            <img src="phone-five.png" alt="Image 1">
+            <img src="./img/phone-five.png" alt="Image 1">
             <div class="blog__articlephone_container-block-description">
                 <h2 class="blog__articlephone_container-block-description-title">Quia non numquam eiusania</h2>
                 <span class="blog__articlephone_container-block-description-date">july 14 — 2024</span>
             </div>
         </div>
         <div class="blog__articlephone_container-block">
-            <img src="phone-six.png" alt="Image 1">
+            <img src="./img/phone-six.png" alt="Image 1">
             <div class="blog__articlephone_container-block-description">
                 <h2 class="blog__articlephone_container-block-description-title">Neque porro quisqu discatio tic</h2>
                 <span class="blog__articlephone_container-block-description-date">may 24 — 2024</span>
             </div>
         </div>
         <div class="blog__articlephone_container-block">
-            <img src="phone-seven.png" alt="Image 1">
+            <img src="./img/phone-seven.png" alt="Image 1">
             <div class="blog__articlephone_container-block-description">
                 <h2 class="blog__articlephone_container-block-description-title">Quia non numquam eiusania</h2>
                 <span class="blog__articlephone_container-block-description-date">june 10 — 2024</span>
