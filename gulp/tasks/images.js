@@ -1,9 +1,34 @@
-import gulpif from 'gulp-if'
-import imagemin, { gifsicle, mozjpeg, optipng, svgo } from 'gulp-imagemin'
-import newer from 'gulp-newer'
+import gulp from 'gulp';
+import webp from 'gulp-webp';
+import imageMin from 'gulp-imagemin';
 
-export const images = () => {
-  return app.gulp
-    .src([`${app.paths.srcImgFolder}/**/**.{jpg,jpeg,png,svg}`], { encoding: false })
-    .pipe(app.gulp.dest(app.paths.buildImgFolder))
-}
+import { plugins } from '../config/plugins.js';
+import { filePaths } from '../config/paths.js';
+import { logger } from "../config/logger.js";
+
+const images = (isBuild, serverInstance) => {
+  return gulp.src(filePaths.src.images)
+    .pipe(logger.handleError('IMAGES'))
+    .pipe(plugins.newer(filePaths.build.images))
+    .pipe(plugins.if(isBuild, webp()))
+    .pipe(plugins.if(isBuild, gulp.dest(filePaths.build.images)))
+    .pipe(plugins.if(isBuild, gulp.src(filePaths.src.images)))
+    .pipe(plugins.if(isBuild, plugins.newer(filePaths.build.images)))
+    .pipe(
+      plugins.if(
+        isBuild,
+        imageMin({
+          progressive: true,
+          svgoPlugins: [{ removeViewBox: false }],
+          interlaced: true,
+          optimizationLevel: 3, // 0 to 7
+        })
+      )
+    )
+    .pipe(gulp.dest(filePaths.build.images))
+    .pipe(gulp.src(filePaths.src.svg))
+    .pipe(gulp.dest(filePaths.build.images))
+    .pipe(serverInstance.stream());
+};
+
+export { images };

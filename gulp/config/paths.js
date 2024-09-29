@@ -1,20 +1,38 @@
-const srcFolder = './src'
-const buildFolder = './public'
+import path from 'path';
 
-export const paths = {
-  base: {
-    src: srcFolder,
-    build: buildFolder
+const buildFolder = './dist';
+const srcFolder = './src';
+
+const filePaths = {
+  build: {
+    js: `${buildFolder}/js/`,
+    css: `${buildFolder}/css/`,
+    images: `${buildFolder}/img/`,
+    fonts: `${buildFolder}/fonts/`,
+    static: `${buildFolder}/static/`,
   },
-  srcSvg: `${srcFolder}/img/svg/**.svg`,
-  srcImgFolder: `${srcFolder}/img`,
-  buildImgFolder: `${buildFolder}/img`,
-  srcScss: `${srcFolder}/styles/**/*.scss`,
-  buildCssFolder: `${buildFolder}/css`,
-  srcFullJs: `${srcFolder}/js/*.js`,
-  srcMainJs: `${srcFolder}/js/main.js`,
-  buildJsFolder: `${buildFolder}/js`,
-  srcComponentsFolder: `${srcFolder}/components`,
-  assetsFolder: `${srcFolder}/assets`,
-  fontsFolder: `${srcFolder}/fonts`
-}
+  src: {
+    js: `${srcFolder}/js/*.js`,
+    images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp}`,
+    svg: `${srcFolder}/img/**/*.svg`,
+    scss: [`${srcFolder}/scss/main.scss`, `${srcFolder}/scss/pages/*.scss`],
+    html: `${srcFolder}/*.html`,
+    static: `${srcFolder}/static/**/*.*`,
+    svgIcons: `${srcFolder}/icons/*.svg`,
+    fontFacesFile: `${srcFolder}/scss/config/fonts.scss`,
+    fonts: `${srcFolder}/fonts/`,
+  },
+  watch: {
+    js: `${srcFolder}/js/**/*.js`,
+    scss: `${srcFolder}/scss/**/*.scss`,
+    html: `${srcFolder}/**/*.html`,
+    images: `${srcFolder}/**/*.{jpg,jpeg,png,svg,gif,webp,ico}`,
+    static: `${srcFolder}/static/**/*.*`,
+  },
+  buildFolder,
+  srcFolder,
+  projectDirName: path.basename(path.resolve()),
+  ftp: ``, // Путь к нужной папке на удаленном сервере. Gulp добавит имя папки проекта автоматически
+};
+
+export { filePaths };

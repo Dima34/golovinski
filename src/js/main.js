@@ -55,7 +55,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
   if ('scrollRestoration' in history) {
     history.scrollRestoration = 'manual';
   }
-  
+
   // split text into words
   new SplitType('[text-split]', {
     types:
@@ -68,7 +68,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       'lines',
     tagName: 'span',
   })
-  
+
   gsap.registerPlugin(GSDevTools, ScrollTrigger);
   //
   // ScrollSmoother.create({
@@ -87,7 +87,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     rotationX: -70, transformOrigin: '0% 70% -2.604vw', opacity: 0, stagger: 0.05,
     delay: .5,
   })
-  
+
   const plateCanvas = document.querySelector('#plate')
   let advantageCards = Array.from(document.querySelectorAll('.advantages-card'));
   let lastAdvantageCard = advantageCards[advantageCards.length - 1];
@@ -96,7 +96,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     ease: 'power1.out',
     scale: 0,
   }, 0)
-  
+
   gsap.from(plateCanvas, {scale: 1})
   gsap.to(plateCanvas, {
     scrollTrigger: {
@@ -186,7 +186,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       marginRight: "2.604vw"
     })
   }
-  
+
   window.addEventListener('onLoaderLoaded', (event) => {
     setTimeout(()=>{
       headerLogoTl.play()
@@ -267,13 +267,13 @@ function findSegment(scrollFromTop, segmentsData) {
 function stopOscillationAndGetSegments(segmetsData) {
   let screenCenter = window.innerHeight / 2
   let advantageCards = Array.from(document.querySelectorAll('.advantages-card'));
-  
+
   segmetsData = advantageCards.map((card, index) =>{
     let cardPosFromTop = getYCenterDistance(card) - screenCenter
     let rotationValue = (index + 1) % 2 ? -1 : 1
     return [cardPosFromTop, rotationValue]
   })
-  
+
   if (oscillating) {
     oscillating = false
     clearInterval(oscillationInterval);
@@ -282,7 +282,7 @@ function stopOscillationAndGetSegments(segmetsData) {
   } else{
     segmetsData.unshift([0, 0])
   }
-  
+
   return segmetsData
 
 
@@ -305,7 +305,7 @@ function startOscillation() {
     let numToAdd = step * direction;
     let newCurrentValue = currentValue + numToAdd;
     currentValue = newCurrentValue;
-    
+
     // currentValue = Number((currentValue + numToAdd).toFixed(10));
     if (currentValue >= 1 || currentValue <= -1) {
       direction *= -1; // Міняємо напрямок
@@ -374,7 +374,7 @@ function initRunline(runlineSelector, numberOfDuplicates = 13) {
   const runlineItem = document.querySelector(`${runlineSelector} .partners_runline-item`);
 
   runlineWrapper.style.animation = "runlineScroll 30s linear infinite"
-  
+
   if (!runlineWrapper || !runlineItem) {
     console.error("Не вдалося знайти потрібні елементи для стрічки:", runlineSelector);
     return;
