@@ -1,21 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article Page</title>
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
-    integrity="sha256-WAgYcAck1C1/zEl5sBl5cfyhxtLgKGdpI3oKyJffVRI="
-    crossorigin="anonymous"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
+@@include("./partials/head.html", {
+    pageName: "Golovinski - Contacts",
+    additionalLinks : []
+})
+    
 <body class="article_base">
+    @@include("./partials/header.html")
+    @@include("./partials/loader.html")
     <section class="article__header">
         <div class="article__header_column">
             <h3 class="article__header_column-title">You might be interesting:</h3>
@@ -23,25 +15,25 @@
                 <div class="article__header_column-list-item">
                     <div class="article__header_column-list-itemi">
                         <span class="article__header_column-list-item-name">Application of Volga Blue slabs</span>
-                        <img class="article__header_column-list-item-img" src="Vector.png" alt="Href">
+                        <img class="article__header_column-list-item-img" src="./img/Vector.png" alt="Href">
                     </div>
                 </div>
                 <div class="article__header_column-list-item">
                     <div class="article__header_column-list-itemi">
                         <span class="article__header_column-list-item-name">Advantages of labradorite</span>
-                        <img class="article__header_column-list-item-img" src="Vector.png" alt="Href">
+                        <img class="article__header_column-list-item-img" src="./img/Vector.png" alt="Href">
                     </div>
                 </div>
                 <div class="article__header_column-list-item">
                     <div class="article__header_column-list-itemi">
                         <span class="article__header_column-list-item-name">Stages of stone extraction</span>
-                        <img class="article__header_column-list-item-img" src="Vector.png" alt="Href">
+                        <img class="article__header_column-list-item-img" src="./img/Vector.png" alt="Href">
                     </div>
                 </div>
                 <div class="article__header_column-list-item">
                     <div class="article__header_column-list-itemi">
                         <span class="article__header_column-list-item-name">We invite you to production</span>
-                        <img class="article__header_column-list-item-img" src="Vector.png" alt="Href">
+                        <img class="article__header_column-list-item-img" src="./img/Vector.png" alt="Href">
                     </div>
                 </div>
             </div>
@@ -67,16 +59,16 @@
         </div>
     </section>
     <section class="article__subheader">
-        <img class="article__subheader-img" src="Star.png" alt="Star">
+        <img class="article__subheader-img" src="./img/Star.png" alt="Star">
         <div class="article__subheader-two">
             <span class="article__subheader-name">by golovinski company</span>
             <div class="article__subheader-nav">
                 <span class="article__subheader-nav-text">scroll down</span>
-                <img class="article__subheader-nav-img" src="Vector_down.png" alt="Down">
+                <img class="article__subheader-nav-img" src="./img/Vector_down.png" alt="Down">
             </div>
         </div>
     </section>
-    <img src="articleone.png" alt="Preview">
+    <img src="./img/articleone.png" alt="Preview">
     <section class="article__type-one">
         <div class="article__type-one-line">
             <h2 class="article__type-one-title">introduction</h2>
@@ -107,11 +99,11 @@
     </section>
     <section class="article__img">
         <div class="article__img_phonedekstop">
-            <img class="article__img_phonedekstop-img" src="articletwo.png" alt="Two Image">
+            <img class="article__img_phonedekstop-img" src="./img/articletwo.png" alt="Two Image">
         </div>
         <div class="article__img_dekstop">
-            <img src="articlethree.png" alt="Three Image">
-            <img src="articlefour.png" alt="Four Image">
+            <img src="./img/articlethree.png" alt="Three Image">
+            <img src="./img/articlefour.png" alt="Four Image">
         </div>
     </section>
     <div class="article_base_line">
