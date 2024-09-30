@@ -58,6 +58,7 @@
     flex-direction: column;
     overflow: hidden;
     gap: 1.04vw;
+    text-decoration: none;
 }
 .blog__image_container-block:nth-child(1) {
     width: 30.89vw;
@@ -260,6 +261,7 @@
         flex-direction: column;
         overflow: hidden;
         gap: 3.2vw;
+        text-decoration: none;
     }
     .blog__imagephone_container-block:nth-child(1) {
         height: 77.07vw;
@@ -395,6 +397,3 @@
     }
 
 }
-
-
-
