@@ -2410,13 +2410,10 @@ input[type="text"], input[type="email"] {
     gap: 1.04vw;
     padding-top: 7.81vw;
 }
-.article__img_phonedekstop-img,
-.article__img_dekstop {
-    height: 20.57vw;
-}
-.article__img_dekstop {
+.article__img_phonedekstop {
     display: flex;
     gap: 1.04vw;
+    height: 20.57vw;
 }
 .article_base_line {
     height: 0.1vw;
@@ -2764,17 +2761,20 @@ input[type="text"], input[type="email"] {
         letter-spacing: -0.005vw;
     }
     .article__img {
-        height: 86.4vw;
+        height: 95.7vw;
         display: flex;
         justify-content: center;
-        align-items: flex-start;
+        gap: 0;
         padding-top: 9.33vw;
     }
-    .article__img_phonedekstop > img {
-        width: 93.6vw;
+    .article__img_phonedekstop > img:nth-child(1) {
         height: 62.4vw;
-        object-fit: cover;
-        overflow: hidden;
+    }
+    .article__img_phonedekstop > img:nth-child(2) {
+        display: none;
+    }
+    .article__img_phonedekstop > img:nth-child(3) {
+        display: none;
     }
     .article__footer-phone {
         padding-top: 10.67vw;
@@ -2944,7 +2944,7 @@ input[type="text"], input[type="email"] {
     width: 7.5vw;
     height: 1.93vw; 
     background-color: #101010;
-    border-radius: 0.21vw; 
+    border-radius: 0.1vw; 
     font-weight: 500;
     font-size: 0.78vw;
     line-height: 0.87vw; 
@@ -2984,14 +2984,14 @@ input[type="text"], input[type="email"] {
         height: 216.53vw; 
     }
     .error {
-        width: 93.6vw; 
+        width: 89.33vw; 
         gap: 10.67vw;
     }
     .error__block {
         gap: 10.67vw; 
     }
     .error__block-img {
-        width: 93.6vw; 
+        width: 89.33vw; 
     }
     .error__block_text {
         gap: 2.67vw;
@@ -3004,7 +3004,7 @@ input[type="text"], input[type="email"] {
         letter-spacing: -0.01vw;
     }
     .error__block_text-two {
-        font-size: 5.6vw; 
+        font-size: 5.3vw; 
         line-height: 6.16vw;
         letter-spacing: -0.01vw;
         text-transform: none;
@@ -3079,6 +3079,7 @@ input[type="text"], input[type="email"] {
     flex-direction: column;
     overflow: hidden;
     gap: 1.04vw;
+    text-decoration: none;
 }
 .blog__image_container-block:nth-child(1) {
     width: 30.89vw;
@@ -3281,6 +3282,7 @@ input[type="text"], input[type="email"] {
         flex-direction: column;
         overflow: hidden;
         gap: 3.2vw;
+        text-decoration: none;
     }
     .blog__imagephone_container-block:nth-child(1) {
         height: 77.07vw;
