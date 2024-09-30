@@ -2228,21 +2228,16 @@ input[type="text"], input[type="email"] {
     flex-direction: column;
     gap: 2.6vw;
 }
-.article__header_two-text::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 0.052vw;
-    background-color: #202020; 
-}
 .article__header_two-text-block {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-bottom: 2.604vw;
+    border-bottom: 0.13vw solid #202020;
 }
 .article__header_two-text-block-title {
     margin: 0;
-    width: 30.89vw;
+    width: 33.89vw;
     font-size: 5vw;
     line-height: 4.75vw;
     letter-spacing: -0.002vw;
@@ -2412,7 +2407,7 @@ input[type="text"], input[type="email"] {
     letter-spacing: -0.001vw;
 }
 .article__img {
-    height: 42.97vw;
+    padding: 18.23vw;
     display: flex;
     justify-content: center;
     gap: 1.04vw;
@@ -2640,15 +2635,10 @@ input[type="text"], input[type="email"] {
         width: 93.6vw;
         margin: auto;
         height: 38.93vw;
+        padding-bottom: 5.33vw;
+        border-bottom: 0.53vw solid #202020;
     }
-    .article__header_two-phone-block::after {
-        content: '';
-        display: block;
-        margin: auto;
-        height: 0.27vw;
-        background-color: #202020;
-        margin-top: 5.33vw;
-    }
+
     .article__header_two-phone-description {
         margin: 0;
         padding-top: 5.33vw;
@@ -2769,7 +2759,9 @@ input[type="text"], input[type="email"] {
         letter-spacing: -0.005vw;
     }
     .article__img {
-        height: 95.7vw;
+        padding: 0;
+        margin-bottom: 24vw;
+        height: 70.4vw;
         display: flex;
         justify-content: center;
         gap: 0;
@@ -3384,22 +3376,29 @@ input[type="text"], input[type="email"] {
         height: 93.3vw;
     }
     
-    .blog__footer_btn {
-        width: 50.7vw; 
-        height: 50.7vw;
-        border-radius: 50%; 
-        border: transparent;
-        background-color: transparent;
-        color: #fff; 
-        text-transform: uppercase; 
-        font-size: 5.3vw; 
-        line-height: 5.3vw;
-        font-weight: 500;
-        letter-spacing: -0.0107vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-    }
+.blog__footer_btn {
+    width: 13.02vw;
+    height: 13.02vw;
+    border: transparent;
+    background-color: transparent;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.35vw;
+    line-height: 1.35vw;
+    font-weight: 500;
+    letter-spacing: -0.04px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3e%3ccircle cx='50' cy='50' r='45' fill='none' stroke='%23fff' stroke-width='1' stroke-dasharray='235 75' stroke-dashoffset='-70' stroke-linecap='round'/%3e%3c/svg%3e");
+    background-size: cover;
+    background-position: center;
+    transition: all 0.5s ease;
+}
+
+.blog__footer_btn:hover {
+    animation: draw-line 2s forwards ease-in-out;
+}
 
 }
