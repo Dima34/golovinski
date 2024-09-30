@@ -183,8 +183,7 @@
 .blog__footer_btn {
     width: 13.02vw;
     height: 13.02vw;
-    border-radius: 50%;
-    border: 0.05vw dashed #fff;
+    border: transparent;
     background-color: transparent;
     color: #fff;
     text-transform: uppercase;
@@ -196,20 +195,12 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    position: relative;
-    transition: all 0.3s ease;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3e%3ccircle cx='50' cy='50' r='45' fill='none' stroke='%23fff' stroke-width='1' stroke-dasharray='235 75' stroke-dashoffset='-70' stroke-linecap='round'/%3e%3c/svg%3e");
+    background-size: cover;
+    background-position: center;
 }
-.blog__footer_btn::before {
-    content: '';
-    position: absolute;
-    bottom: -1.56vw;
-    right: -1.56vw;
-    width: 7.29vw;
-    height: 7.29vw;
-    background-color: #000;
-    border-radius: 50%;
-    z-index: 1;
-}
+
+
 @media screen and (width < 900px) {
     .blogbody {
         width: 93.6vw;
@@ -368,7 +359,7 @@
         width: 50.7vw; 
         height: 50.7vw;
         border-radius: 50%; 
-        border: 0.27vw dashed #fff; 
+        border: transparent;
         background-color: transparent;
         color: #fff; 
         text-transform: uppercase; 
@@ -380,20 +371,6 @@
         justify-content: center;
         align-items: center;
         cursor: pointer;
-        position: relative;
-        transition: all 0.3s ease;
-    }
-    
-    .blog__footer_btn::before {
-        content: '';
-        position: absolute;
-        bottom: -8vw;
-        right: -8vw; 
-        width: 32vw; 
-        height: 32vw; 
-        background-color: #000; 
-        border-radius: 50%;
-        z-index: 1;
     }
 
 }
