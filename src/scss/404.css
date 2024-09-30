@@ -39,7 +39,7 @@
     width: 7.5vw;
     height: 1.93vw; 
     background-color: #101010;
-    border-radius: 0.21vw; 
+    border-radius: 0.1vw; 
     font-weight: 500;
     font-size: 0.78vw;
     line-height: 0.87vw; 
@@ -79,14 +79,14 @@
         height: 216.53vw; 
     }
     .error {
-        width: 93.6vw; 
+        width: 89.33vw; 
         gap: 10.67vw;
     }
     .error__block {
         gap: 10.67vw; 
     }
     .error__block-img {
-        width: 93.6vw; 
+        width: 89.33vw; 
     }
     .error__block_text {
         gap: 2.67vw;
@@ -99,7 +99,7 @@
         letter-spacing: -0.01vw;
     }
     .error__block_text-two {
-        font-size: 5.6vw; 
+        font-size: 5.3vw; 
         line-height: 6.16vw;
         letter-spacing: -0.01vw;
         text-transform: none;
