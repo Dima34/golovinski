@@ -269,13 +269,10 @@
     gap: 1.04vw;
     padding-top: 7.81vw;
 }
-.article__img_phonedekstop-img,
-.article__img_dekstop {
-    height: 20.57vw;
-}
-.article__img_dekstop {
+.article__img_phonedekstop {
     display: flex;
     gap: 1.04vw;
+    height: 20.57vw;
 }
 .article_base_line {
     height: 0.1vw;
@@ -623,17 +620,20 @@
         letter-spacing: -0.005vw;
     }
     .article__img {
-        height: 86.4vw;
+        height: 95.7vw;
         display: flex;
         justify-content: center;
-        align-items: flex-start;
+        gap: 0;
         padding-top: 9.33vw;
     }
-    .article__img_phonedekstop > img {
-        width: 93.6vw;
+    .article__img_phonedekstop > img:nth-child(1) {
         height: 62.4vw;
-        object-fit: cover;
-        overflow: hidden;
+    }
+    .article__img_phonedekstop > img:nth-child(2) {
+        display: none;
+    }
+    .article__img_phonedekstop > img:nth-child(3) {
+        display: none;
     }
     .article__footer-phone {
         padding-top: 10.67vw;
