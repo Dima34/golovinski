@@ -264,13 +264,26 @@ header {
 .advantages-card {
 	width: 22.917vw;
 	min-height: 22.917vw;
-	background: #0E0E0E;
 	padding: 1.042vw;
 	display: flex;
 	flex-direction: column;
 	gap: 1.25vw;
 	justify-content: space-between;
 	position: relative;
+	
+	h2,p{
+		z-index: 1;
+	}
+	
+	&:before{
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: var(--box-height);
+		background: #0E0E0E;
+		width: 100%;
+	}
 
 	&:nth-child(even) {
 		margin-left: auto;
@@ -292,6 +305,8 @@ header {
 		background-repeat: no-repeat;
 		background-position: center;
 		transition: .3s;
+		opacity: var(--ill-opacity);
+		transform: rotate(var(--ill-rotation));
 	}
 
 	&:nth-child(1) .advantages-card_text {
@@ -480,7 +495,7 @@ header {
 	display: inline-block;
 
 	.rotating-words {
-		animation: scroll 10s infinite;
+		animation: scroll 18s infinite;
 		transition: transform 500ms;
 	}
 
@@ -494,18 +509,23 @@ header {
 		0% {
 			transform: translateY(calc(var(--height) * 0))
 		}
+		10%{transform: translateY(calc(var(--height) * 0))}
 		20% {
 			transform: translateY(calc(var(--height) * -1))
 		}
+		30%{transform: translateY(calc(var(--height) * -1))}
 		40% {
 			transform: translateY(calc(var(--height) * -2))
 		}
+		50%{transform: translateY(calc(var(--height) * -2))}
 		60% {
 			transform: translateY(calc(var(--height) * -3))
 		}
+		70%{transform: translateY(calc(var(--height) * -3))}
 		80% {
 			transform: translateY(calc(var(--height) * -4))
 		}
+		90%{transform: translateY(calc(var(--height) * -4))}
 		100% {
 			transform: translateY(calc(var(--height) * -5))
 		}
