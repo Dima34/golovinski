@@ -39,7 +39,7 @@
     width: 7.5vw;
     height: 1.93vw; 
     background-color: #101010;
-    border-radius: 0.05vw; 
+    border-radius: 0.1vw; 
     font-weight: 500;
     font-size: 0.78vw;
     line-height: 0.87vw; 
@@ -92,6 +92,7 @@
         gap: 2.67vw;
     }
     .error__block_text-one {
+        border-radius: 0.53vw;
         width: 38.4vw;
         height: 9.87vw;
         font-size: 4vw; 
