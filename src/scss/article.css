@@ -38,13 +38,13 @@
 .article__header_column-list-item {
     display: flex;
     flex-direction: column;
+    text-decoration: none;
     gap: 0.78vw;
 }
 .article__header_column-list-itemi {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    text-decoration: none;
     color: #fff;
 }
 .article__header_column-list-item::after {
@@ -95,6 +95,9 @@
     letter-spacing: -0.002vw;
     text-transform: uppercase;
     font-weight: 500;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
 }
 .article__header_two-text-block-date {
     font-weight: 500;
@@ -292,7 +295,11 @@
 .article__img_phonedekstop {
     display: flex;
     gap: 1.04vw;
-    height: 20.57vw;
+    width: 94.79vw;
+}
+.article__img_phonedekstop > img {
+    width: 30.9vw;
+    object-fit: cover;
 }
 
 @media screen and (width < 900px) {
