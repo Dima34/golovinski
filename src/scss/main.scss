@@ -2322,9 +2322,10 @@ input[type="text"], input[type="email"] {
 }
 .article_base > img {
     width: 100vw;
-    margin: 7.81vw 0;
+    margin-top: 7.81vw;
 } 
 .article__type-one {
+    padding-top: 7.81vw;
     display: flex;
     flex-direction: column;
     gap: 7.81vw;
@@ -2371,29 +2372,7 @@ input[type="text"], input[type="email"] {
     line-height: 1.13vw;
     letter-spacing: -0.001vw;
 }
-.article__type-two {
-    padding-top: 7.81vw;
-    width: 94.79vw;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    color: #fff;
-    justify-content: space-between;
-    gap: 7.81vw;
-}
-.article__type-two-line {
-    display: flex;
-    width: 94.8vw;
-    justify-content: space-between;
-}
-.article__type-two::after {
-    content: '';
-    display: block;
-    width: 94.79vw;
-    margin: auto;
-    height: 0.052vw;
-    background-color: transparent; 
-}
+
 .article__type-two-title {
     margin: 0;
     width: 19.79vw;
@@ -2418,13 +2397,6 @@ input[type="text"], input[type="email"] {
     display: inline-block;
     margin-top: 0.26vw;
     margin-right: 0.52vw; 
-}
-.article__type-two-description {
-    margin: 0;
-    width: 47.4vw;
-    font-size: 0.94vw;
-    line-height: 1.13vw;
-    letter-spacing: -0.001vw;
 }
 .article__img {
     display: flex;
