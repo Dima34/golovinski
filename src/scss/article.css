@@ -205,7 +205,7 @@
     letter-spacing: -0.001vw;
 }
 
-.article__type-two-title {
+.article__type-one-title {
     margin: 0;
     width: 19.79vw;
     font-weight: 500;
@@ -217,13 +217,13 @@
     overflow-wrap: break-word;
     white-space: normal;
 }
-.article__type-two-block {
+.article__type-one-block {
     width: 21.5vw;
     display: flex;
     flex-direction: row;
     align-items: flex-start;
 }
-.article__type-two-block::before {
+.article__type-one-block::before {
     content: '';
     min-width: 1.14vw;
     min-height: 1.14vw;
