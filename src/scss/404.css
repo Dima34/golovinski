@@ -4,7 +4,7 @@
 .error__page {
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding: 14.11vw 0 6.35vw 0;
     height: 56.25vw; 
     font-family: Manrope;
     background-color: #000000;
