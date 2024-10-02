@@ -2757,26 +2757,28 @@ input[type="text"], input[type="email"] {
     margin-bottom: 4.17vw;
 }
 .blog__header-title {
-    margin: 0;
-    width: 46.88vw;
-    font-weight: 500;
-    font-size: 3.33vw;
-    line-height: 3.5vw;
-    letter-spacing: -0.04px;
-    text-align: justify;
-    text-transform: uppercase;
-    text-indent: 5.89vw;
-}
-.blog__header-subtitle {
-    align-self: start;
-    padding-top: 0.57vw;
-    font-weight: 500;
-    font-size: 1.04vw;
-    line-height: 1.1vw;
-    letter-spacing: -0.04px;
-    color: #404040;
-    text-transform: uppercase;
-}
+        margin: 0;
+        width: 46.88vw;
+        font-weight: 500;
+        font-size: 3.33vw;
+        line-height: 3.5vw;
+        letter-spacing: -0.04px;
+        text-align: justify;
+        align-self: flex-start;
+        text-transform: uppercase;
+        text-indent: 5.89vw;
+    }
+    .blog__header-subtitle {
+        align-self: start;
+        padding-top: 0.57vw;
+        width: 15vw;
+        font-weight: 500;
+        font-size: 1.04vw;
+        line-height: 1.1vw;
+        letter-spacing: -0.04px;
+        color: #404040;
+        text-transform: uppercase;
+    }
 .block__imagephone {
     display: none;
 }
