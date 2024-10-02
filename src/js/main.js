@@ -75,7 +75,6 @@ function advantagesAnim() {
                 trigger: advantageCard,
                 start: "top 66%",
                 toggleActions: "play none none none",
-                markers: true,
                 duration: 3
             }
         }).fromTo(advantageCard,
@@ -258,7 +257,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     )
 
     advantagesAnim();
-    
     letsCreateAnim();
 
 
@@ -482,3 +480,4 @@ if (!isMobile()) {
         initRunline(".partners", 13); // Вказуємо селектор і кількість дублювань
     });
 }
+
