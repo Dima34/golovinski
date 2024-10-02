@@ -2274,11 +2274,13 @@ input[type="text"], input[type="email"] {
     letter-spacing: -0.002vw;
     text-transform: capitalize;
     text-align: left;
+    min-height: 14.6vw; 
+    margin-bottom: 3vw;
 }
+
 .article__subheader {
     width: 94.79vw;
     margin: auto;
-    height: 18.85vw;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -2326,17 +2328,15 @@ input[type="text"], input[type="email"] {
 } 
 .article__type-one {
     padding-top: 7.81vw;
+    padding-bottom: 7.81vw;
     display: flex;
     flex-direction: column;
     gap: 7.81vw;
 }
-.article__type-one::after {
-    content: '';
-    display: block;
-    width: 94.79vw;
+.article__type-one ~ .article__type-one {
     margin: auto;
-    height: 0.052vw;
-    background-color: #202020; 
+    width: 94.79vw; 
+    border-top: 0.052vw solid #202020;
 }
 .article__type-one-line {
     width: 94.79vw;
@@ -2345,25 +2345,6 @@ input[type="text"], input[type="email"] {
     flex-direction: row;
     color: #fff;
     justify-content: space-between;
-}
-.article__type-one-title {
-    margin: 0;
-    font-weight: 500;
-    font-size: 1.88vw;
-    line-height: 1.88vw;
-    letter-spacing: -0.002vw;
-    text-transform: uppercase;
-}
-.article__type-one-title::before {
-    content: '';
-    min-width: 1.14vw;
-    min-height: 1.14vw;
-    background-color: white;
-    border-radius: 50%;
-    align-items: center;
-    display: inline-block;
-    margin-bottom: 0.2vw;
-    margin-right: 0.52vw; 
 }
 .article__type-one-description {
     margin: 0;
@@ -2381,6 +2362,9 @@ input[type="text"], input[type="email"] {
     line-height: 1.88vw;
     letter-spacing: -0.002vw;
     text-transform: uppercase;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
 }
 .article__type-two-block {
     width: 21.5vw;
@@ -2395,7 +2379,7 @@ input[type="text"], input[type="email"] {
     background-color: white;
     border-radius: 50%;
     display: inline-block;
-    margin-top: 0.26vw;
+    margin-top: 0.36vw;
     margin-right: 0.52vw; 
 }
 .article__img {
