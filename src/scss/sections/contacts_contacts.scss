@@ -226,6 +226,9 @@ input[type="text"], input[type="email"], textarea {
     resize: none;
   }
 }
+.icon {
+  order: 2;
+}
 
 @media screen and (min-width: 900px) {
   .contacts {
