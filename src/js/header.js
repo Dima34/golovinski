@@ -5,8 +5,6 @@
     const responsiveMenuNums = document.querySelectorAll(".header_mobile-nav li>span");
     const tl = gsap.timeline();
 
-    console.log(responsiveMenu)
-    console.log(responsiveMenuLinks)
 
     tl.to(responsiveMenu, {
         ease: "circ.inOut",
@@ -27,8 +25,10 @@
         if (Array.from(menuBtn.classList).includes("is-active")) {
             menuBtn.classList.remove("is-active");
             tl.reverse();
+            document.body.classList.remove("scroll-block");
         } else {
             menuBtn.classList.add("is-active");
             tl.play();
+            document.body.classList.add("scroll-block");
         }
     });

@@ -29,6 +29,10 @@ body:not(.loaded) {
 	padding: 0 2.604vw;
 }
 
+body.scroll-block{
+	overflow: hidden;
+}
+
 @media (width <= 900px) {
 	.wrapper {
 		width: 100vw;
