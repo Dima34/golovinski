@@ -16,13 +16,13 @@
   font-family: Manrope !important;
   display: flex;
   flex-direction: column;
-  
+
   input{
     font-family: Manrope;
     font-weight: 500;
   }
-  
-  
+
+
 
   .message-container{
     input{
@@ -262,15 +262,15 @@ input[type="text"], input[type="email"] {
     letter-spacing: -0.02vw;
     color: white;
     border-bottom: 1px solid #404040;
-    
+
     &::placeholder{
       color: #404040;
     }
   }
-  
+
   .message-container{
     position: relative;
-    
+
     .optional-label{
       position: absolute;
       right: 0;
@@ -280,7 +280,7 @@ input[type="text"], input[type="email"] {
       color: #404040;
     }
   }
-  
+
   .message-container input {
     width: 100%;
     height: 7.91vw;
@@ -316,7 +316,7 @@ input[type="text"], input[type="email"] {
       &:before{
         position: absolute;
       }
-      
+
       &:after {
         width: 0.9375vw;
         height: 0.9375vw;
