@@ -1,0 +1,157 @@
+
+.hero {
+  padding-top: 8.333vw;
+  min-height: 400px;
+  padding-bottom: 7.292vw;
+  height: calc(100vh + 4.688vw);
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+}
+
+.hero_title {
+  color: #FFF;
+  font-family: Manrope;
+  font-size: 6.667vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 96%;
+  letter-spacing: -0.4vw;
+  text-transform: uppercase;
+  text-align: center;
+  transform-style: preserve-3d;
+
+  .gallient {
+    font-family: Gallient;
+    font-size: 5.938vw;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -0.087vw;
+    margin-right: 0.938vw;
+    transform-style: preserve-3d;
+  }
+}
+
+.hero_title,
+.hero_title .gallient {
+  perspective: 65.104vw;
+}
+
+.hero-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.25vw;
+  width: 100%;
+
+  .button-arrow {
+    margin-top: 1.25vw;
+    height: 0;
+  }
+}
+
+.hero-bottom_content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.521vw;
+}
+
+.hero-bottom_title {
+  color: #FFF;
+  font-family: Manrope;
+  font-size: 1.458vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+  letter-spacing: -0.058vw;
+  text-transform: uppercase;
+}
+
+.hero-bottom_subtitle {
+  width: 23.958vw;
+  color: #707070;
+  font-family: Manrope;
+  font-size: 0.938vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -0.037vw;
+}
+
+@media (width <= 900px) {
+  .hero {
+    padding-top: 33.867vw;
+    padding-bottom: 13.333vw;
+    height: 208.533vw;
+  }
+
+  .hero_title {
+    color: #FFF;
+    font-family: Manrope;
+    font-size: 12.267vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: -0.736vw;
+    text-transform: uppercase;
+    transform-style: preserve-3d;
+
+    .gallient {
+      color: #FFF;
+      text-align: center;
+      font-family: Gallient;
+      font-size: 11.2vw;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%;
+      letter-spacing: -0.224vw;
+      text-transform: uppercase;
+      transform-style: preserve-3d;
+    }
+  }
+
+  .hero_title,
+  .hero_title .gallient {
+    perspective: 65.104vw;
+  }
+
+  .hero-bottom {
+    flex-direction: column;
+    gap: 5.333vw;
+
+    .button-arrow {
+      margin-top: 0;
+      height: 0;
+    }
+  }
+
+  .hero-bottom_content {
+    gap: 2.133vw;
+  }
+
+  .hero-bottom_title {
+    color: #FFF;
+    font-family: Manrope;
+    font-size: 6.4vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%; /* 7.04vw */
+    letter-spacing: -0.256vw;
+    text-transform: uppercase;
+  }
+
+  .hero-bottom_subtitle {
+    color: #707070;
+    font-family: Manrope;
+    font-size: 4.267vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 5.12vw */
+    letter-spacing: -0.128vw;
+    width: 100%;
+  }
+}

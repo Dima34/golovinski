@@ -1,0 +1,135 @@
+.who-we {
+  padding: 7.292vw 0;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4.167vw;
+
+  h2 {
+    color: #FFF;
+    font-family: Manrope;
+    font-size: 6.667vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 90%; /* 6vw */
+    letter-spacing: -0.333vw;
+    text-transform: uppercase;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 26.146vw 1fr;
+    gap: 21.563vw;
+  }
+
+  .who-we_intro {
+    width: 100%;
+    height: auto;
+    float: right;
+  }
+
+  .who-we_left {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 1.667vw;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .who-we_right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2.604vw;
+  }
+
+  .who-we_right-title {
+    color: #FFF;
+    font-family: Manrope;
+    font-size: 1.667vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 105%;
+    letter-spacing: -0.083vw;
+    text-transform: uppercase;
+  }
+
+  .who-we_right-content {
+    display: flex;
+    width: 100%;
+    gap: 1.667vw;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    p {
+      width: 22.917vw;
+    }
+  }
+}
+
+@media (width <= 900px) {
+  .who-we {
+    padding: 13.333vw 0;
+    width: 100vw;
+    gap: 6.667vw;
+
+    h2 {
+      color: #FFF;
+      font-family: Manrope;
+      font-size: 34.133vw;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 90%; /* 30.72vw */
+      letter-spacing: -1.707vw;
+      text-transform: uppercase;
+    }
+
+    .wrapper {
+      display: flex;
+      gap: 0;
+    }
+
+    .who-we_intro {
+      width: 100%;
+      height: auto;
+      float: right;
+    }
+
+    .who-we_left {
+      display: none;
+    }
+
+    .who-we_right {
+      gap: 5.333vw;
+    }
+
+    .who-we_right-title {
+      color: #FFF;
+      font-family: Manrope;
+      font-size: 5.333vw;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 110%; /* 5.867vw */
+      letter-spacing: -0.213vw;
+      text-transform: uppercase;
+    }
+
+    .who-we_right-content {
+      color: #808080;
+      font-family: Manrope;
+      font-size: 4.267vw;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 125%; /* 5.333vw */
+      letter-spacing: -0.128vw;
+      flex-direction: column;
+      gap: 8vw;
+
+      p {
+        width: unset;
+      }
+    }
+  }
+}
