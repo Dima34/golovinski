@@ -1,4 +1,5 @@
 .preview {
+  font-family: Manrope;
   width: 95vw;
   margin: auto;
   margin-bottom: 14.6vw;
@@ -67,7 +68,21 @@
   text-align: justify;
 }
 
+.technology-note {
+  position: absolute;
+  left: 2.34vw;
+  font-weight: 500;
+  font-size: 0.83vw;
+  line-height: 1.04vw;
+  letter-spacing: -0.002vw;
+  color: #404040;
+}
+
 @media (width <= 900px) {
+  .technology-note{
+    display: none;
+  }
+  
   .preview {
     width: 93.6vw;
     margin-bottom: 24vw;
