@@ -1,4 +1,41 @@
 @media screen and (max-width: 900px) {
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 2.133vw;
+    margin-top: 6.667vw;
+    
+    label{
+      margin-bottom: 0;
+    }
+
+    input[type="checkbox"] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 3.733vw;
+      height: 3.733vw;
+      border: 0.267vw solid white;
+      border-radius: 0.533vw;
+      outline: none;
+      cursor: pointer;
+      position: relative;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:checked::after {
+        content: '';
+        width: 2.133vw;
+        height: 2.133vw;
+        background-color: white;
+        border-radius: 0.267vw;
+      }
+    }
+  }
+  
   .contacts__input-form label{
     color: #FFF;
     font-family: Manrope;
@@ -7,8 +44,6 @@
     font-weight: 500;
     line-height: normal;
     letter-spacing: -0.139vw;
-    text-transform: uppercase;
-    margin-bottom: 4vw;
   }
 }
 
@@ -17,13 +52,15 @@
   display: flex;
   flex-direction: column;
 
-  input{
+  input, textarea{
     font-family: Manrope;
     font-weight: 500;
+
+    &:focus{
+      outline: 0;
+    }
   }
-
-
-
+  
   .message-container{
     input{
       width: 100%;
@@ -62,7 +99,7 @@
       align-items: center;
       justify-content: center;
       width: 100%;
-      margin-top: 1.33vw;
+      margin-top: 6.667vw;
       height: 17.86vw;
       background-color: transparent;
       border: none;
@@ -143,16 +180,49 @@
   }
 }
 
-input[type="text"], input[type="email"] {
+input[type="text"], input[type="email"], textarea {
   font-size: 4.8vw;
   margin-bottom: 5.333vw;
   padding-bottom: 1.6vw;
   letter-spacing: -0.02vw;
   color: white;
+  background: 0;
+  border: 0;
   border-bottom: 1px solid #404040;
+  width: 100%;
 
   &::placeholder{
     color: #404040;
+  }
+}
+
+.contacts__input-block{
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.optional-label{
+  position: absolute;
+  right: 0;
+  bottom: 3.2vw;
+  border-radius: 7.467vw;
+  border: 0.267vw solid #404040;
+  color: #404040;
+  padding: 1.6vw 3.2vw;
+
+  font-size: 3.2vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.128vw;
+  text-transform: uppercase;
+}
+
+.message-container{
+  position: relative;
+  
+  textarea{
+    margin: 0;
   }
 }
 
@@ -227,6 +297,7 @@ input[type="text"], input[type="email"] {
       &-block {
         display: flex;
         width: 100%;
+        flex-direction: row;
       }
 
       &-btn {
@@ -249,19 +320,16 @@ input[type="text"], input[type="email"] {
   .icon {
     order: 1;
   }
-  label {
-    font-size: 0.78vw;
-    line-height: 1.07vw;
-    margin-bottom: 0.83vw;
-    letter-spacing: -0.02vw;
-  }
-  input[type="text"], input[type="email"] {
+  
+  input[type="text"], input[type="email"], textarea {
     font-size: 1.04vw;
     margin-bottom: 2.19vw;
     padding-bottom: 0.52vw;
     letter-spacing: -0.02vw;
     color: white;
+    border: 0;
     border-bottom: 1px solid #404040;
+    background: 0;
 
     &::placeholder{
       color: #404040;
@@ -275,64 +343,66 @@ input[type="text"], input[type="email"] {
       position: absolute;
       right: 0;
       bottom: 0.521vw;
-      border-radius: 28px;
-      border: 1px solid #404040;
+      border-radius: 1.458vw;
+      border: 0.052vw solid #404040;
       color: #404040;
+      padding: 0.3125vw 0.625vw;
+
+      font-family: Manrope;
+      font-size: 0.833vw;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      letter-spacing: -0.033vw;
+      text-transform: uppercase;
     }
   }
 
-  .message-container input {
+  .message-container textarea {
     width: 100%;
     height: 7.91vw;
-    padding-bottom: 6.46vw;
+    margin: 0;
   }
-
-  .optional-label {
-    top: 5.625vw;
-    height: 1.77vw;
-    padding: 0.3125vw 0.625vw;
-    border-radius: 0.78125vw;
-    font-size: 0.83vw;
-    letter-spacing: -0.02vw;
-  }
+  
   input[id="message"] {
     margin-bottom: 0;
   }
 
+  label {
+    font-size: 0.78vw;
+    line-height: 1.07vw;
+    letter-spacing: -0.02vw;
+  }
+  
   .checkbox {
-    order: 1;
-    margin-top: 4.17vw;
-    height: 1.15vw;
+    display: flex;
+    align-items: center;
+    order: 2;
+    margin-top: 4.167vw;
+    gap: 0.521vw;
 
     input[type="checkbox"] {
-      display: none;
-    }
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 0.938vw;
+      height: 0.938vw;
+      border: 0.052vw solid white;
+      border-radius: 0.104vw;
+      outline: none;
+      cursor: pointer;
+      position: relative;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-    label {
-      font-size: 0.99vw;
-      line-height: 1.42vw;
-      letter-spacing: -0.02vw;
-
-      &:before{
-        position: absolute;
-      }
-
-      &:after {
-        width: 0.9375vw;
-        height: 0.9375vw;
-        margin-right: 0.52vw;
-        border-radius: 0.05vw;
-      }
-    }
-
-    label + input[type="checkbox"]:checked {
-
-      &::before {
-        width: 0.52vw;
-        height: 0.52vw;
-        border-radius: 0.05vw;
-        top: 0.1vw;
-        left: 0.13vw;
+      &:checked::after {
+        content: '';
+        width: 0.521vw;
+        height: 0.521vw;
+        background-color: white;
+        border-radius: 0.052vw;
       }
     }
   }

@@ -24,20 +24,20 @@
 
                 <label for="message">[MESSAGE]</label>
                 <div class="message-container">
-                    <input type="text" id="message" name="message" placeholder="I need ...">
+                    <textarea id="message" name="message" placeholder="I need ..."></textarea>
                     <span class="optional-label">OPTIONAL</span>
                 </div>
 
                 <div class="contacts__input-block">
+                    <div class="checkbox">
+                        <input type="checkbox" id="agree" checked>
+                        <label for="agree">I agree to Privacy Policy</label>
+                    </div>
                     <button class="contacts__input-btn" type="submit">
                         submit  message
                         <img class="contacts__input-btn-arrow" src="img/button.png" alt="Arrow">
                     </button>
-                    <div></div>
-<!--                    <div class="checkbox">-->
-<!--                        <label for="agree">I agree to Privacy Policy</label>-->
-<!--                        <input type="checkbox" id="agree" checked>-->
-<!--                    </div>-->
+                    
                 </div>
             </form>
         </div>

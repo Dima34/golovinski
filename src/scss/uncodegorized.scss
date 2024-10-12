@@ -1,75 +1,3 @@
-
-label {
-  font-weight: 500;
-  font-size: 3.47vw;
-  line-height: 4.736vw;
-  color: #FFFFFF;
-  margin-bottom: 4vw;
-  letter-spacing: -0.1vw;
-}
-
-.message-container {
-  position: relative;
-
-  input {
-    padding-bottom: 14.7vw;
-  }
-}
-
-.optional-label {
-  position: absolute;
-  right: 0;
-  top: 10.67vw;
-  height: 7.46vw;
-  border: 1px solid #404040;
-  padding: 1.6vw 3.2vw;
-  border-radius: 3.47vw;
-  font-size: 3.2vw;
-  letter-spacing: -0.1vw;
-  color: #404040;
-}
-
-.checkbox {
-  display: flex;
-  align-items: center;
-  height: 5.86vw;
-  margin-top: 6.67vw;
-  order: 2;
-
-  input[type="checkbox"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    width: 3.73vw;
-    height: 3.73vw;
-    border: 2px solid white;
-    border-radius: 1px;
-    outline: none;
-    cursor: pointer;
-    margin-right: 2.13vw;
-    position: relative;
-
-    &:checked::before {
-      content: '';
-      width: 2.13vw;
-      height: 2.13vw;
-      background-color: white;
-      border-radius: 1px;
-      position: absolute;
-      top: 0.406vw;
-      left: 0.4vw;
-    }
-
-    label {
-      font-weight: 500;
-      letter-spacing: -0.1vw;
-      font-size: 4.27vw;
-      line-height: 5.83vw;
-      margin: 0;
-    }
-  }
-}
-
 .icon {
   order: 2;
 }
@@ -86,75 +14,6 @@ label {
 .base {
   font-family: Manrope;
   background-color: #000000;
-}
-
-.preview {
-  width: 95vw;
-  margin: auto;
-  margin-bottom: 14.6vw;
-}
-
-.preview__title {
-  width: 55vw;
-  margin: 0;
-  margin-top: 9.2vw;
-  margin-left: auto;
-  font-weight: 500;
-  font-size: 6.15vw;
-  line-height: 6vw;
-  letter-spacing: -0.002vw;
-  color: #fff;
-  text-transform: uppercase;
-  position: relative;
-  z-index: 1;
-}
-
-.preview__title-history-img {
-  width: 38.8vw;
-  height: 47.7vw;
-  margin-top: -5.7vw;
-  margin-left: 11.4vw;
-  z-index: 0;
-}
-
-.preview__title-history {
-  display: flex;
-  flex-direction: row;
-}
-
-.preview__title-history-btn {
-  padding: 1.2vw;
-  width: 4.2vw;
-  height: 4.2vw;
-  border-radius: 50%;
-  border: 0.05vw dashed #fff;
-  background-color: transparent;
-  cursor: pointer;
-  margin-top: auto;
-}
-
-.preview__title-history-btn-icon {
-  margin: 0;
-  width: 1.6vw;
-  height: 1.6vw;
-  transform: rotate(45deg);
-}
-
-.preview__description {
-  margin-left: 9.1vw;
-  margin-top: 30.1vw;
-  display: flex;
-  gap: 1vw;
-}
-
-.preview__description-text {
-  width: 14.9vw;
-  margin: 0;
-  font-size: 0.83vw;
-  line-height: 1.08vw;
-  letter-spacing: -0.0015vw;
-  color: #fff;
-  text-align: justify;
 }
 
 .main {
@@ -252,84 +111,9 @@ label {
   margin-left: 13vw;
 }
 
-.end {
-  width: 95vw;
-  margin: auto;
-}
-
-.end__description {
-  font-size: 2.34vw;
-  line-height: 2.88vw;
-  letter-spacing: -0.002vw;
-  margin-bottom: 6.3vw;
-}
-
-.end__description-partone {
-  text-indent: 9.2vw;
-  display: block;
-  color: #fff;
-}
-
-.end__description-parttwo {
-  text-indent: 0;
-  color: #404040;
-}
-
-.end__signature {
-  padding: 6.3vw 0 6.3vw 79vw;
-  font-weight: 500;
-  font-size: 1.04vw;
-  line-height: 1.04vw;
-  letter-spacing: -0.002vw;
-  color: #fff;
-  text-transform: uppercase;
-}
 
 
 @media screen and (width < 900px) {
-  .preview {
-    width: 93.6vw;
-    margin-bottom: 24vw;
-  }
-
-  .preview__title {
-    width: 93.6vw;
-    margin-top: 31.2vw;
-    font-size: 10.4vw;
-    line-height: 10.1vw;
-    letter-spacing: -0.01vw;
-    color: #fff;
-    text-transform: uppercase;
-  }
-
-  .preview__title-history {
-    flex-direction: column;
-  }
-
-  .preview__title-history-btn {
-    display: none;
-  }
-
-  .preview__title-history-img {
-    width: 68.8vw;
-    height: 84.5vw;
-    margin: 6.7vw 0 6.7vw 24.8vw;
-  }
-
-  .preview__description {
-    margin: 0;
-    flex-direction: column;
-  }
-
-  .preview__description-text {
-    width: 93.6vw;
-    font-size: 4vw;
-    line-height: 5.6vw;
-    letter-spacing: -0.008vw;
-    color: #fff;
-    text-align: left;
-  }
-
   .main {
     width: 93.6vw;
   }
@@ -410,31 +194,7 @@ label {
     color: #808080;
   }
 
-  .end {
-    width: 93.6vw;
-    margin-top: 24vw;
-  }
 
-  .end__description {
-    font-size: 6.1vw;
-    line-height: 7.6vw;
-    letter-spacing: -0.01vw;
-    margin-bottom: 8vw;
-  }
-
-  .end__description-partone {
-    text-indent: 20.5vw;
-    color: #fff;
-  }
-
-  .end__signature {
-    padding: 8vw 0 8vw 17.9vw;
-    font-size: 4.9vw;
-    line-height: 5.3vw;
-    letter-spacing: -0.01vw;
-    color: #fff;
-    text-transform: uppercase;
-  }
 }
 
 
