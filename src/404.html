@@ -6,8 +6,12 @@
 })
 
 <body class="error__page">
+<main>
     @@include("./partials/header.html")
     @@include("./partials/loader.html")
+    <div id="smooth-wrapper">
+        <div id="smooth-content">
+
     <section class="error">
         <div class="error__block">
             <img class="error__block-img" src="./img/errorimg.png" alt="404">
@@ -20,6 +24,8 @@
     </section>
 
     <script src="../js/header.js"></script>
-
+        </div>
+    </div>
+</main>
 </body>
 </html>
