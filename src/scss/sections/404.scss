@@ -1,8 +1,11 @@
 .error__page {
   display: flex;
   justify-content: center;
-  padding: 14.11vw 0 6.35vw 0;
-  height: 56.25vw;
+  padding: 6.35vw 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: Manrope;
   background-color: #000000;
 }
@@ -12,6 +15,7 @@
   width: 47.08vw;
   align-items: center;
   gap: 2.6vw;
+  height: fit-content;
 }
 .error__block {
   display: flex;
@@ -74,8 +78,7 @@
 @media (width <= 900px) {
   .error__page {
     align-items: center;
-    padding: 0;
-    height: 216.53vw;
+    padding: 30vw 0;
   }
   .error {
     width: 89.33vw;
