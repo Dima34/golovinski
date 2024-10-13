@@ -1,0 +1,47 @@
+.article__img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7.81vw;
+}
+.article__img::after {
+  content: '';
+  display: block;
+  width: 94.79vw;
+  margin: auto;
+  height: 0.052vw;
+  background-color: transparent;
+}
+.article__img_phonedekstop {
+  display: flex;
+  gap: 1.04vw;
+  width: 94.79vw;
+}
+.article__img_phonedekstop > img {
+  width: 30.9vw;
+  object-fit: cover;
+}
+
+@media (width <= 900px) {
+
+  .article__img {
+    padding: 0;
+    margin-bottom: 24vw;
+    height: 70.4vw;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    padding-top: 9.33vw;
+  }
+  .article__img_phonedekstop > img:nth-child(1) {
+    height: auto;
+    width: 100%;
+  }
+  .article__img_phonedekstop > img:nth-child(2) {
+    display: none;
+  }
+  .article__img_phonedekstop > img:nth-child(3) {
+    display: none;
+  }
+}
