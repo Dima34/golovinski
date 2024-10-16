@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+"apiVersion": 3,
+  "name": "acf/article-text",
+  "title": "Текстовый блок",
+  "category": "design",
+  "postTypes": ["article"],
+  "acf": {
+    "mode": "edit",
+    "renderCallback": "\\App\\blade_render_callback"
+  },
+  "supports": {
+    "align": false
+  }
+}

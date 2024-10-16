@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+
+.error__page {
+    display: flex;
+    justify-content: center;
+    padding: 14.11vw 0 6.35vw 0;
+    height: 56.25vw;
+    font-family: Manrope;
+    background-color: #000000;
+
+}
+.error {
+    display: flex;
+    flex-direction: column;
+    width: 47.08vw;
+    align-items: center;
+    gap: 2.6vw;
+  margin: 0 auto;
+}
+.error__block {
+    display: flex;
+    flex-direction: column;
+  align-items: center;
+    gap: 4.17vw;
+}
+.error__block-img {
+    width: 47.08vw;
+}
+.error__block_text {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    gap: 0.94vw;
+}
+.error__block_text-one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7.5vw;
+    height: 1.93vw;
+    background-color: #101010;
+    border-radius: 0.1vw;
+    font-weight: 500;
+    font-size: 0.78vw;
+    line-height: 0.87vw;
+    letter-spacing: -0.002vw;
+}
+.error__block_text-two {
+    font-size: 1.72vw;
+    line-height: 1.97vw;
+    letter-spacing: -0.002vw;
+    text-transform: none;
+}
+
+.error__button {
+    background: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 1.2vw;
+    line-height: 1.31vw;
+    font-weight: 500;
+    letter-spacing: -0.002vw;
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    border-bottom: 0.1vw solid #FFFFFF;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.52vw;
+}
+.error__button-icon {
+    width: 0.83vw;
+    height: 0.83vw;
+}
+
+@media screen and (max-width: 900px) {
+    .error__page {
+        height: 216.53vw;
+    }
+    .error {
+        width: 89.33vw;
+        gap: 10.67vw;
+    }
+    .error__block {
+        gap: 10.67vw;
+    }
+    .error__block-img {
+        width: 89.33vw;
+    }
+    .error__block_text {
+        gap: 2.67vw;
+    }
+    .error__block_text-one {
+        border-radius: 0.53vw;
+        width: 38.4vw;
+        height: 9.87vw;
+        font-size: 4vw;
+        line-height: 4.48vw;
+        letter-spacing: -0.01vw;
+    }
+    .error__block_text-two {
+        font-size: 5.3vw;
+        line-height: 6.16vw;
+        letter-spacing: -0.01vw;
+        text-transform: none;
+    }
+
+    .error__button {
+        font-size: 4.8vw;
+        line-height: 5.04vw;
+        letter-spacing: -0.01vw;
+        border-bottom: 0.4vw solid #FFFFFF;
+        gap: 1.6vw;
+    }
+    .error__button-icon {
+        width: 2.93vw;
+        height: 2.93vw;
+    }
+}

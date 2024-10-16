@@ -1,0 +1,35 @@
+services:
+  db:
+    image: mysql:8
+    restart: always
+    env_file:
+      - ./devcontainer/.env
+
+  wordpress:
+    user: "33:33"
+    working_dir: /var/www/html/wp-content/themes/sage-theme
+    restart: always
+    depends_on:
+      - db
+    build: ./devcontainer
+    command: [ "apache2-foreground" ]
+    env_file:
+      - ./devcontainer/.env
+    ports:
+      - 8080:80
+    volumes:
+      - .:/var/www/html/wp-content/themes/sage-theme
+      - wp_data:/var/www/html
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    depends_on:
+      - db
+    restart: unless-stopped
+    ports:
+      - 8081:80
+    env_file:
+      - ./devcontainer/.env
+
+volumes:
+  mysqldb-data:
+  wp_data:

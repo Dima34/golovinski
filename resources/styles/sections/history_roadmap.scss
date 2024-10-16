@@ -1,0 +1,259 @@
+.roadmap {
+  font-family: Manrope;
+  padding-bottom: 7.292vw;
+
+  &-list {
+    display: flex;
+    align-items: center;
+    margin-top: -.6vw;
+  }
+
+  &-item {
+    width: fit-content !important;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+
+    &__dot {
+      width: 1.1vw;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      display: block;
+      background-color: #fff;
+      margin-bottom: 1.6vw;
+      opacity: 0;
+      transition: opacity 900ms ease;
+    }
+
+    &__date {
+      font-size: 7.5vw;
+      font-family: Gallient, sans-serif;
+      color: #202020;
+      transition: color 600ms ease;
+      //overflow: hidden;
+      clip-path: inset(-10% -10% -2% -10%);
+    }
+  }
+
+  &-top {
+    margin-bottom: 7.5vw;
+    overflow-y: visible !important;
+  }
+
+  &-line {
+    width: 100%;
+    height: 2px;
+    background-color: #202020;
+  }
+
+  &-bottom {
+    position: relative;
+  }
+}
+
+.sliders {
+  --delay-transition: all 1.75s cubic-bezier(0.6, 0.05, 0.1, 1);
+  transition: var(--delay-transition) !important;
+
+  &-navigation {
+    position: absolute;
+    bottom: 0;
+    left: 2.5vw;
+    z-index: 10;
+    display: flex;
+    grid-gap: 10px;
+    align-items: center;
+
+    &__btn {
+      cursor: pointer;
+      width: 4vw;
+      aspect-ratio: 1;
+      //border: 1px solid #fff;
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: transparent;
+      transition: border 400ms ease;
+      position: relative;
+
+      &--prev {
+        svg {
+          transform: scaleX(-1);
+        }
+      }
+
+      svg {
+        transition: stroke 400ms ease;
+        stroke: #fff;
+      }
+      .circle{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        //stroke: #fff;
+        //Path length 122.52211349
+        stroke-dasharray: 0 125;
+        stroke-dashoffset: 0;
+        stroke-linecap: round;
+        //transition: stroke-dasharray $transition;
+        transform: rotateZ(90deg);
+        pointer-events: none;
+      }
+    }
+  }
+
+  &-item {
+    padding: 0 2.5vw;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 9vw;
+    min-height: 30.5vw;
+  }
+
+  &-info {
+    padding-bottom: 4vw;
+  }
+
+  &-banner {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      max-width: 100%;
+      //transform: scale(1.2);
+      //clip-path: inset(0 0 100% 0);
+    }
+  }
+
+  &-heading {
+    display: block;
+    margin-bottom: 2.5vw;
+    font-weight: 500;
+    font-size: 3vw;
+    text-transform: uppercase;
+    .line-wrap{
+      overflow: hidden;
+    }
+  }
+
+  &-description {
+    font-size: .95vw;
+    line-height: 120%;
+    letter-spacing: -0.05vw;
+    .line{
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    &:not(:last-child) {
+      margin-bottom: .9vw;
+    }
+  }
+}
+
+
+@media (width <= 900px) {
+  .roadmap {
+    &-list {
+      margin-top: -1.5vw;
+    }
+
+    &-top {
+      margin-bottom: 6vw;
+    }
+
+    &-item {
+      &__date {
+        font-size: 13.625vw;
+      }
+
+      &__dot {
+        width: 2.5vw;
+        margin-bottom: 3.5vw;
+        aspect-ratio: 1 / 1;
+      }
+    }
+
+    &-line {
+      height: 1px;
+    }
+
+    &-bottom {
+      display: flex !important;
+      flex-direction: column-reverse;
+    }
+  }
+
+  .sliders {
+    --x: 0;
+
+    &-item {
+      padding: 0;
+      grid-gap: 20px;
+      display: flex !important;
+      flex-direction: column-reverse !important;
+      min-height: auto !important;
+    }
+
+    &-navigation {
+      margin-top: 5vw;
+      position: static;
+      justify-content: center;
+
+      &__btn {
+        width: 10.5vw;
+
+        svg {
+          width: 3.5vw;
+        }
+      }
+    }
+
+    &-info {
+      padding: 0 3.25vw;
+    }
+
+    &-heading {
+      font-size: 6vw;
+    }
+
+    &-description {
+      font-size: 3.5vw;
+
+      &:not(:last-child) {
+        margin-bottom: 4vw;
+      }
+    }
+
+    &-banner {
+      height: 50vw;
+    }
+  }
+}
+
+.swiper-button-disabled {
+  border-color: #202020;
+
+  svg {
+    stroke: #202020;
+  }
+}
+
+.swiper-slide-active {
+  .roadmap-item__date {
+    color: #fff;
+  }
+
+  .roadmap-item__dot {
+    opacity: 1;
+  }
+}

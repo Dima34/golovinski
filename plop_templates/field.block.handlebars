@@ -1,0 +1,16 @@
+<?php
+
+use Carbon_Fields\Block;
+use Carbon_Fields\Field;
+
+Block::make('{{snakeCase blockName}}', '{{titleCase blockName}}')
+    ->add_fields([
+Field::make('text', 'title', 'Title'),
+
+])
+->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+
+echo \Roots\view('blocks.{{dashCase blockName}}', [
+'title' => $fields['title'],
+])->render();
+})->set_category('{{dashCase categoryName}}', '{{sentenceCase categoryName}}');

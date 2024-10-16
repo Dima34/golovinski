@@ -1,0 +1,157 @@
+
+.advantages {
+  padding: 7.292vw 0;
+
+  .wrapper {
+    width: 78.854vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20.833vw;
+  }
+}
+
+.advantages-card {
+  width: 22.917vw;
+  min-height: 22.917vw;
+  padding: 1.042vw;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25vw;
+  justify-content: space-between;
+  position: relative;
+
+  h2, p {
+    z-index: 1;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: #0E0E0E;
+    width: 100%;
+  }
+
+  &:nth-child(even) {
+    margin-left: auto;
+  }
+
+  &:nth-child(odd) {
+    margin-right: auto;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 1.042vw;
+    bottom: 1.042vw;
+    width: 1.302vw;
+    height: 1.302vw;
+    background-image: url("data:image/svg+xml,%3Csvg width='25' height='25' viewBox='0 0 25 25' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.5814 7.79056L21.3953 3.37196L25 9.7673L18.2558 12.558L25 15.6975L21.2791 21.9766L15.4651 17.4417L16.2791 24.9999H8.72093L9.53488 17.4417L3.72093 21.9766L0 15.6975L6.62791 12.558L0 9.7673L3.60465 3.37196L9.4186 7.79056L8.72093 0.232422H16.2791L15.5814 7.79056Z' fill='white'/%3E%3C/svg%3E%0A");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    //transition: .3s;
+    opacity: var(--ill-opacity);
+    transform: rotate(var(--ill-rotation));
+  }
+
+  &:nth-child(1) .advantages-card_text {
+    max-width: calc(10.885vw + 2.083vw);
+  }
+
+  &:nth-child(2) .advantages-card_text {
+    max-width: calc(14.635vw + 2.083vw);
+  }
+
+  &:nth-child(3) .advantages-card_text {
+    max-width: calc(13.49vw + 2.083vw);
+  }
+
+  &:nth-child(4) .advantages-card_text {
+    max-width: calc(13.698vw + 2.083vw);
+  }
+
+}
+
+.advantages-card_title {
+  color: #FFF;
+  font-family: Manrope;
+  font-size: 1.875vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%; /* 1.875vw */
+  letter-spacing: -0.094vw;
+  text-transform: uppercase;
+}
+
+.advantages-card_text {
+  padding-left: 2.083vw;
+  margin-left: auto;
+}
+
+
+@media (width <= 900px) {
+
+  .advantages {
+    padding: 13.333vw 0;
+
+    .wrapper {
+      width: 100%;
+      gap: 6.667vw;
+    }
+  }
+
+  .advantages-card {
+    width: 100%;
+    min-height: 93.333vw;
+    background: #0E0E0E;
+    padding: 4vw;
+    gap: 6.4vw;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 4vw;
+      bottom: 4vw;
+      width: 5.333vw;
+      height: 5.333vw;
+    }
+
+    &:nth-child(1) .advantages-card_text {
+      max-width: calc(49.333vw + 4vw);
+    }
+
+    &:nth-child(2) .advantages-card_text {
+      max-width: calc(60.8vw + 4vw);
+    }
+
+    &:nth-child(3) .advantages-card_text {
+      max-width: calc(59.467vw + 4vw);
+    }
+
+    &:nth-child(4) .advantages-card_text {
+      max-width: calc(53.067vw + 4vw);
+    }
+
+  }
+
+  .advantages-card_title {
+    color: #FFF;
+    font-family: Manrope;
+    font-size: 8vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 8vw */
+    letter-spacing: -0.4vw;
+    text-transform: uppercase;
+  }
+
+  .advantages-card_text {
+    padding-left: 4vw;
+    margin-left: auto;
+  }
+}

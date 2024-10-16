@@ -1,0 +1,79 @@
+.header_language-selector-desktop{
+display: flex;
+align-items: center;
+  //overflow: hidden;
+  gap: 5px;
+  align-self: center;
+  height: max-content;
+  &__label{
+    font-family: Manrope;
+    font-weight: 500;
+    font-size: 0.833vw;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: #202020;
+  }
+}
+.lang-switcher{
+  $this: &;
+  position: relative;
+
+  &.is-open{
+    opacity: 1;
+    visibility: visible;
+    #{$this}__list{
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__dropbtn{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    font-family: Manrope;
+    font-weight: 500;
+    font-size: 0.833vw;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    .icon{
+      width: 8px;
+      height: 7px;
+    }
+  }
+  &__list{
+    position: absolute;
+    padding: 6.5px 0;
+    border-radius: 2px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+
+    opacity: 0;
+    transition: 0.3s;
+    visibility: hidden;
+  }
+  .lang-item{
+    a{
+      font-family: Manrope;
+      padding: 0 10px;
+      font-weight: 500;
+      font-size: 0.833vw;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      color: #000;
+    }
+    &:not(:last-child){
+      margin-bottom: 3px;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .header_language-selector-desktop{
+    display: none;
+  }
+}
