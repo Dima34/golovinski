@@ -361,6 +361,8 @@ function stopOscillationAndGetSegments(segmetsData) {
         return [cardPosFromTop, rotationValue]
     })
 
+    console.log(segmetsData)
+
     if (oscillating) {
         oscillating = false
         clearInterval(oscillationInterval);
@@ -415,16 +417,22 @@ function handleSegmentRotation(scrollFromTopPX, segmetsData) {
     }
 }
 
+let scrolledFromZero = false;
+let segmetsData;
+
 function handlePlateRotation() {
     const scrollY = window.scrollY;
     const scrollFromTopPX = scrollY;
-    let segmetsData;
 
     if (scrollFromTopPX === 0) {
         startOscillation();
+        scrolledFromZero = false;
     } else if (!isMobile()) {
-        segmetsData = stopOscillationAndGetSegments();
-
+        if (!scrolledFromZero) {
+            segmetsData = stopOscillationAndGetSegments();
+            scrolledFromZero = true;
+        }
+        
         handleSegmentRotation(scrollFromTopPX, segmetsData);
     }
 }
